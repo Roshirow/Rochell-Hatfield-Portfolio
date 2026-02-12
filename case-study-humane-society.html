@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Second Chance Humane Society website design case study: UX research, user journey mapping, and information architecture to increase adoption rates and donations for animal shelter in Washington State by Rochell Hatfield.">
+    <meta name="keywords" content="nonprofit website design, animal shelter UX, adoption website, user research, information architecture, Rochell Hatfield">
+    <meta name="author" content="Rochell Hatfield">
+    
+    <title>Humane Society Website Design Case Study: Second Chance | Rochell Hatfield</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data - Case Study -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Second Chance Humane Society Website Design",
+      "author": {
+        "@type": "Person",
+        "name": "Rochell Hatfield"
+      },
+      "description": "Comprehensive website redesign for animal shelter focused on increasing adoption rates and donations through strategic UX design",
+      "keywords": "nonprofit web design, animal adoption, UX research, user personas",
+      "datePublished": "2020-06-01"
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #6B4E3D;
+            --coral: #FF9B9B;
+            --peach: #FFB88C;
+            --yellow: #FFD97D;
+            --mint: #A8E6CF;
+            --cyan: #89CFF0;
+            --lavender: #C9B4E5;
+            --cream: #FFF5E8;
+            --bg-light: #FFFBF5;
+            --text-body: #8B6F5C;
+            --border: #FFE8DB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-light);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1.2rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--coral);
+            outline: none;
+        }
+
+        .nav-links a:focus {
+            outline: 3px solid var(--coral);
+            outline-offset: 2px;
+        }
+
+        .resume-btn {
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 155, 155, 0.3);
+        }
+
+        /* Dropdown Menu */
+        .nav-item {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            min-width: 280px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            z-index: 200;
+        }
+
+        .nav-item:hover .dropdown-menu,
+        .nav-item:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--cream);
+            color: var(--coral);
+        }
+
+        .dropdown-toggle::after {
+            content: ' ▼';
+            font-size: 0.7rem;
+            margin-left: 0.3rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(100px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 155, 155, 0.4);
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 155, 155, 0.6);
+        }
+
+        body {
+            padding-top: 80px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--coral);
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .meta-item strong {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .meta-item span {
+            color: var(--primary);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(255, 215, 125, 0.2), rgba(168, 230, 207, 0.2));
+            border-left: 4px solid var(--coral);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .tag-list {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .tag {
+            background: var(--cream);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--coral);
+            font-family: 'Fraunces', serif;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-top: 0.5rem;
+        }
+
+        .cta-section {
+            background: white;
+            border: 2px solid var(--coral);
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 155, 155, 0.4);
+        }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .quote {
+            font-style: italic;
+            padding: 1.5rem;
+            border-left: 3px solid var(--mint);
+            background: rgba(168, 230, 207, 0.1);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="rochell-hatfield-portfolio.html" class="logo">
+                <img src="/img/creative-design-studio-design-banner.png" alt="Rochell Hatfield Creative Studio">
+            </a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="rochell-hatfield-portfolio.html#work" class="dropdown-toggle">Work</a>
+                    <div class="dropdown-menu">
+                        <a href="case-study-iowa-city-coffee.html">Loyalty Program Redesign</a>
+                        <a href="case-study-bird-house.html">The Bird House Rebrand</a>
+                        <a href="case-study-humane-society.html">Humane Society Website</a>
+                        <a href="case-study-social-media.html">Social Media Strategy</a>
+                    </div>
+                </li>
+                <li><a href="rochell-hatfield-portfolio.html#services">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rochell-hatfield-portfolio.html#contact">Contact</a></li>
+                <li><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" class="resume-btn" download>Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / <a href="index.html#work">Work</a> / Second Chance Humane Society
+        </div>
+
+        <h1>Humane Society Website Design: Increasing Adoptions Through Strategic UX</h1>
+
+        <div class="meta">
+            <div class="meta-item">
+                <strong>Client</strong>
+                <span>Second Chance Humane Society</span>
+            </div>
+            <div class="meta-item">
+                <strong>Timeline</strong>
+                <span>Academic Project (2020)</span>
+            </div>
+            <div class="meta-item">
+                <strong>Role</strong>
+                <span>UX Researcher, Content Strategist, Visual & Interaction Designer</span>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Project Mission</h3>
+            <p>Second Chance Humane Society's main objective is to prevent animal cruelty, promote kindness, and support all animals by providing them with a second chance at a good life.</p>
+            <p><strong>My Mission:</strong> Design Washington's newest humane society website focused on people who love animals, improving their user experience while strategizing the organization's prosperous longevity.</p>
+        </div>
+
+        <h2>The Challenge</h2>
+        <p>Through competitive analysis of Washington state humane society websites, I identified two critical problems that consistently prevented successful adoption outcomes:</p>
+
+        <h3>Information Architecture Failures</h3>
+        <ul>
+            <li><strong>Not enough information:</strong> Users couldn't get answers to basic questions, leading to abandonment</li>
+            <li><strong>Too much information, poorly structured:</strong> Excessive, disorganized content made navigation difficult and overwhelming</li>
+            <li><strong>Phone call dependencies:</strong> Most sites forced users to call for basic information or appointment scheduling</li>
+            <li><strong>Multi-step friction:</strong> Adoption processes required multiple phone calls and in-person visits before seeing basic details</li>
+        </ul>
+
+        <h3>User Barriers to Adoption</h3>
+        <p>Research from Civic Science's "Dog Shelters vs. Pet Stores" study revealed the top barriers:</p>
+        <ul>
+            <li><strong>Behavioral concerns (15%):</strong> Belief that shelter dogs have behavioral issues</li>
+            <li><strong>Age preferences (6%):</strong> Wanted puppies or younger dogs specifically</li>
+            <li><strong>Fee concerns (6%):</strong> Perceived shelter fees as too high</li>
+            <li><strong>Other misconceptions (12%):</strong> Various unfounded concerns about shelter adoption</li>
+        </ul>
+
+        <p class="quote">"My job is to inform and recruit these lost potential adopters by easing their minds on perceived negatives of adoption."</p>
+
+        <h2>Research & Discovery</h2>
+
+        <h3>Data-Driven Insights</h3>
+        <p>I consulted authoritative sources to build a foundation of industry data:</p>
+        <ul>
+            <li><strong>HSUS (Humane Society of the United States):</strong> National trends and best practices</li>
+            <li><strong>ASPCA:</strong> Adoption statistics and donor behavior</li>
+            <li><strong>AVMA:</strong> Pet ownership demographics and veterinary data</li>
+            <li><strong>Government databases:</strong> Regional animal welfare statistics</li>
+        </ul>
+
+        <h3>Competitive Analysis: Spokane Humane Society</h3>
+        <p>Deep dive into the 2020 annual report revealed critical insights:</p>
+        
+        <div class="stat-grid">
+            <div class="stat-item">
+                <div class="stat-number">Individual Donations</div>
+                <p class="stat-label">Primary revenue source</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">29.6 days</div>
+                <p class="stat-label">Average stay for dogs</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">45.5 days</div>
+                <p class="stat-label">Average stay for cats</p>
+            </div>
+        </div>
+
+        <p><strong>Key Takeaway:</strong> Individual donations were the primary income source, making the individual donor experience the main target for my framework design.</p>
+
+        <h3>User Demographics (AVMA 2017-2018 Sourcebook)</h3>
+        <p>Pet ownership data shaped my user persona development:</p>
+        <ul>
+            <li><strong>Species preference:</strong> Dogs most owned, followed by cats</li>
+            <li><strong>Age groups:</strong> Ages 25-40 highest ownership (primary), ages 57-75 second highest</li>
+            <li><strong>Geography:</strong> Less urbanized areas had highest ownership at 67%</li>
+            <li><strong>Socioeconomic factors:</strong> Higher income, post-secondary education, married individuals more likely to own pets</li>
+            <li><strong>Ethnicity:</strong> White/Caucasian majority, Latino/Hispanic second</li>
+        </ul>
+
+        <h3>Primary Research Methods</h3>
+        <p>I created interview surveys targeting three stakeholder groups:</p>
+        <ol>
+            <li><strong>Shelter workers/volunteers:</strong> Understanding operational challenges and adoption process pain points</li>
+            <li><strong>Pet owners who adopted:</strong> Learning what worked and what caused friction</li>
+            <li><strong>Pet owners who purchased:</strong> Understanding why they chose not to adopt and what could change their minds</li>
+        </ol>
+
+        <h2>User-Centered Design Strategy</h2>
+
+        <h3>User Personas & Journey Mapping</h3>
+        <p>Based on AVMA data and qualitative research, I developed detailed user personas representing:</p>
+        <ul>
+            <li>Age ranges (25-40 and 57-75)</li>
+            <li>Income levels (middle to upper-middle class)</li>
+            <li>Family structures (married, families with children)</li>
+            <li>Geographic contexts (suburban and semi-rural)</li>
+            <li>Motivations, concerns, and decision-making processes</li>
+        </ul>
+
+        <div style="margin: 3rem 0;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 1rem;">
+                <img src="/img/humane-society-website-image4.jpg" alt="User journey map for animal adoption process" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="/img/humane-society-website-image10.jpg" alt="Information architecture of the website" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="/img/humane-society-website-image5.jpg" alt="User persona development for humane society website" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="/img/humane-society-website-image2.jpg" alt="Second User persona development for humane society website" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="/img/humane-society-website-image7.jpg" alt="Adoption process user interview" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="/img/humane-society-website-image12.jpg" alt="Reviewing other adoption shelters and humane societies in the area" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-body); font-style: italic; text-align: center;">User persona development and journey mapping based on AVMA demographic research</p>
+        </div>
+
+        <p>I mapped complete user journeys from awareness through post-adoption to identify friction points and opportunities for improvement.</p>
+
+        <h3>Wireframes & Information Architecture</h3>
+        <p>I created low-fidelity wireframes to test information architecture before investing in visual design:</p>
+
+        <div style="margin: 3rem 0;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 1rem;">
+                <img src="/img/humane-society-website-image3.jpg" alt="Wireframe of the mobile website" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="/img/humane-society-website-image11.jpg" alt="Wireframe of the desktop website" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="/img/humane-society-website-image6.jpg" alt="Low-fidelity wireframes for humane society homepage" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="/img/humane-society-website-image8.jpg" alt="Mobile responsive wireframe design" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-body); font-style: italic; text-align: center;">Wireframe iterations testing different approaches to content hierarchy and user flows</p>
+        </div>
+
+        <h3>Information Architecture Goals</h3>
+        <p>I designed the IA to solve common problems found in competitor sites:</p>
+        <ul>
+            <li><strong>Right amount of information:</strong> Provide exactly what users need at each decision point</li>
+            <li><strong>Self-service adoption process:</strong> Enable users to browse, learn, and schedule without phone calls</li>
+            <li><strong>Address misconceptions proactively:</strong> Counter behavioral concerns and fee anxieties with transparent information</li>
+            <li><strong>Clear donor pathways:</strong> Make it easy for supporters to contribute financially</li>
+        </ul>
+
+        <h2>Design Approach</h2>
+
+        <h3>Competitive Analysis: Before & After</h3>
+        <p>I analyzed existing humane society websites to identify common UX failures. Here's an example of a typical shelter website with the problems I aimed to solve:</p>
+
+        <div style="margin: 3rem 0;">
+            <img src="/img/humane-society-website-image1.jpg" alt="Kitten Rescue website showing information architecture issues - excessive text, poor hierarchy, and unclear calls-to-action" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+            <img src="/img/jefferson-humane-society.jpg" alt="Jefferson Humane Society website showing information architecture issues - excessive text, poor hierarchy, and unclear calls-to-action" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+            <p style="font-size: 0.9rem; color: var(--text-body); font-style: italic; text-align: center;">Typical shelter website showing common issues: text-heavy layout, buried CTAs, and poor information hierarchy</p>
+        </div>
+
+        <p><strong>Problems Identified:</strong></p>
+        <ul>
+            <li>Critical information buried in dense text blocks</li>
+            <li>"BY APPOINTMENT ONLY" warning not prominent enough</li>
+            <li>Multiple competing calls-to-action without clear priority</li>
+            <li>Important details (location, hours, contact) relegated to small footer text</li>
+            <li>Volunteer recruitment competing with adoption messaging</li>
+        </ul>
+
+        <h3>Core Requirements</h3>
+        <p>To achieve a successful website, Second Chance needed to:</p>
+        <ol>
+            <li><strong>Generate sustainable income:</strong> Achieve annual operating budget through optimized donation flows</li>
+            <li><strong>Reduce shelter population:</strong> Increase adoption rates by removing barriers</li>
+            <li><strong>Increase volunteer recruitment:</strong> Make it easy to learn about and sign up for volunteer opportunities</li>
+        </ol>
+
+        <h3>Strategic Focus Areas</h3>
+        <ul>
+            <li><strong>Content optimization:</strong> Improve communication to the public with clear, empathetic messaging</li>
+            <li><strong>Service design integration:</strong> Seamlessly integrate adoption processes into the user journey</li>
+            <li><strong>Online donation infrastructure:</strong> Implement secure, user-friendly payment processing</li>
+            <li><strong>Information availability:</strong> Ensure critical details are accessible and easily found</li>
+        </ul>
+
+        <h3>UX Solutions to Adoption Barriers</h3>
+        <p>I designed specific features to address each barrier identified in research:</p>
+
+        <h4>Addressing Behavioral Concerns (15% of non-adopters):</h4>
+        <ul>
+            <li>Individual animal profiles with personality assessments and behavioral notes</li>
+            <li>Success stories from previous adopters</li>
+            <li>Information about behavior evaluation and training programs</li>
+            <li>Transparent disclosure with context (e.g., "Needs quiet home" vs. "Has behavioral issues")</li>
+        </ul>
+
+        <h4>Addressing Age Preferences (6% of non-adopters):</h4>
+        <ul>
+            <li>Prominent age filtering in search functionality</li>
+            <li>Education on benefits of adult dogs (house-trained, calmer temperament)</li>
+            <li>Clear labeling of puppies/kittens when available</li>
+        </ul>
+
+        <h4>Addressing Fee Concerns (6% of non-adopters):</h4>
+        <ul>
+            <li>Transparent pricing with breakdown of what's included (vaccinations, spay/neuter, microchip)</li>
+            <li>Cost comparison: adoption vs. purchasing + initial vet costs</li>
+            <li>Fee assistance programs and special promotions</li>
+        </ul>
+
+        <h2>Key Features & Solutions</h2>
+
+        <h3>Final Visual Design</h3>
+        <p>The final design incorporated a warm, approachable aesthetic that addresses user concerns while maintaining professionalism:</p>
+
+        <div style="margin: 3rem 0;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 1rem;">
+                <img src="/img/MockupDevices.jpg" alt="Second Chance Humane Society homepage design mockup" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="/img/mobile-screens-ux.jpg" alt="Second Chance Humane Society mobile design mockup" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-body); font-style: italic; text-align: center;">Final visual designs showing homepage, animal profiles, and donation experience</p>
+        </div>
+
+        <h3>Streamlined Adoption Process</h3>
+        <p>Removed friction by enabling users to:</p>
+        <ul>
+            <li>Browse available animals with detailed profiles</li>
+            <li>Read about care requirements and personality traits</li>
+            <li>Submit adoption applications online</li>
+            <li>Schedule meet-and-greet appointments through the website</li>
+            <li>Access adoption FAQs and resources</li>
+        </ul>
+
+        <h3>Optimized Donation Experience</h3>
+        <p>Designed to maximize individual donor conversions:</p>
+        <ul>
+            <li>Multiple giving options (one-time, monthly, memorial, sponsorships)</li>
+            <li>Impact messaging ("Your $50 provides...")</li>
+            <li>Simplified donation forms</li>
+            <li>Secure payment integration</li>
+            <li>Donor recognition options</li>
+        </ul>
+
+        <h3>Volunteer Recruitment</h3>
+        <ul>
+            <li>Clear volunteer opportunities and requirements</li>
+            <li>Online application and scheduling</li>
+            <li>Volunteer testimonials and impact stories</li>
+        </ul>
+
+        <h2>Key Deliverables</h2>
+        <div class="tag-list">
+            <span class="tag">User Research & Personas</span>
+            <span class="tag">Competitive Analysis</span>
+            <span class="tag">User Journey Maps</span>
+            <span class="tag">Information Architecture</span>
+            <span class="tag">Wireframes</span>
+            <span class="tag">Visual Design</span>
+            <span class="tag">Interaction Design</span>
+            <span class="tag">Content Strategy</span>
+            <span class="tag">Usability Testing</span>
+        </div>
+
+        <h2>Research Methodology</h2>
+        <ul>
+            <li>Stakeholder interviews (ongoing project)</li>
+            <li>User surveys targeting adopters and non-adopters</li>
+            <li>Competitive website audits (Washington state focus)</li>
+            <li>Data analysis of industry reports (AVMA, ASPCA, HSUS)</li>
+            <li>Financial analysis (Spokane Humane Society annual report)</li>
+        </ul>
+
+        <h2>Impact & Insights</h2>
+        <p>This project demonstrated the power of research-driven design in the nonprofit space. By addressing specific user concerns with empathetic, data-informed solutions, I created a framework that:</p>
+        <ul>
+            <li>Reduces adoption barriers through transparency and education</li>
+            <li>Streamlines the adoption process to reduce abandonment</li>
+            <li>Optimizes donation flows to support organizational sustainability</li>
+            <li>Balances multiple stakeholder needs (families, donors, volunteers, staff)</li>
+        </ul>
+
+        <p><strong>Key Lesson:</strong> Understanding the "why" behind user behavior—in this case, misconceptions about shelter animals—is essential to designing effective solutions. Simply making information available isn't enough; you must proactively address concerns users may not even verbalize.</p>
+    </main>
+
+    <!-- Let's Work Together CTA -->
+    <section style="max-width: 900px; margin: 5rem auto; padding: 3rem 2rem; background: linear-gradient(135deg, var(--coral), var(--peach)); border-radius: 20px; text-align: center; color: white;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Let's Create Something Great Together</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Whether you need research-driven UX design, information architecture strategy, or user-centered nonprofit solutions—I'd love to hear about your project.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="rochell-hatfield-portfolio.html#contact" style="padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; background: white; color: var(--coral); transition: all 0.3s;">Start a Conversation</a>
+            <a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" download style="padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; transition: all 0.3s;">Download My Resume</a>
+        </div>
+    </section>
+
+    <!-- More Case Studies -->
+    <section style="max-width: 1200px; margin: 5rem auto; padding: 0 2rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; font-family: 'Fraunces', serif; color: var(--primary);">More Case Studies</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            
+            <!-- Iowa City Coffee Case Study -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                <img src="/img/Perky Points Loyalty Rewards System.jpg" alt="Loyalty program interface design" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); font-family: 'Fraunces', serif;">Loyalty Program Redesign</h3>
+                    <p style="color: var(--primary); margin-bottom: 1rem;">Multi-channel marketing campaign and UX redesign achieving 26% increase in loyalty participation and $6.32 boost in average spend.</p>
+                    <a href="case-study-iowa-city-coffee.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">View Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Bird House Case Study -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                <img src="/img/bird-house-design-image1.jpg" alt="The Bird House website design" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); font-family: 'Fraunces', serif;">The Bird House Rebrand</h3>
+                    <p style="color: var(--primary); margin-bottom: 1rem;">Complete nonprofit rebrand including logo, brand guidelines, and WCAG 2.1 AA compliant website for Johnson County's hospice home.</p>
+                    <a href="case-study-bird-house.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">View Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Social Media Case Study -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                <img src="/img/social-media-image2.jpg" alt="Social media content" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); font-family: 'Fraunces', serif;">Social Media Strategy</h3>
+                    <p style="color: var(--primary); margin-bottom: 1rem;">Multi-platform content creation and community management across Instagram, Facebook, TikTok, Pinterest, YouTube, and Twitter.</p>
+                    <a href="case-study-social-media.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">View Case Study →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+
+    <footer>
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; padding: 3rem 2rem 2rem; background: var(--primary); color: rgba(255,255,255,0.9);">
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Rochell Hatfield</h3>
+                <p style="line-height: 1.6;">Creative digital marketing designer specializing in brand identity, web design, and strategic campaigns.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <a href="https://www.linkedin.com/in/rochell-hatfield/" target="_blank" aria-label="LinkedIn" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">in</a>
+                    <a href="https://www.instagram.com/rh.creative_studio.design/?hl=en" target="_blank" aria-label="Instagram" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">📷</a>
+                    <a href="https://www.facebook.com/rochell.yazzie.3" target="_blank" aria-label="Facebook" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">f</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Quick Links</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html#work" style="color: rgba(255,255,255,0.7); text-decoration: none;">Portfolio</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html#services" style="color: rgba(255,255,255,0.7); text-decoration: none;">Services</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">About</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html#contact" style="color: rgba(255,255,255,0.7); text-decoration: none;">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Case Studies</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-iowa-city-coffee.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Loyalty Program Redesign</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-bird-house.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">The Bird House Rebrand</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-humane-society.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Humane Society Website</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-social-media.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Social Media Strategy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Get In Touch</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;"><a href="mailto:rochellhatfield@gmail.com" style="color: rgba(255,255,255,0.7); text-decoration: none;">rochellhatfield@gmail.com</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="tel:319-333-9684" style="color: rgba(255,255,255,0.7); text-decoration: none;">319-333-9684</a></li>
+                    <li style="margin-bottom: 0.5rem; color: rgba(255,255,255,0.7);">Coralville, IA</li>
+                    <li style="margin-bottom: 0.5rem;"><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" download style="color: rgba(255,255,255,0.7); text-decoration: none;">Download Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); background: var(--primary); padding-bottom: 2rem;">
+            <p>&copy; 2026 Rochell Hatfield. All rights reserved. | Designed & developed by Rochell Hatfield</p>
+        </div>
+    </footer>
+
+    <script>
+        // Back to top button functionality
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > window.innerHeight * 0.9) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital marketing, web design, and brand visuals for growing businesses. View case studies, deliverables, and results. Rochell Hatfield is available for freelance and full-time work in Iowa.">
+    <meta name="keywords" content="Rochell Hatfield, digital marketing designer, web designer, graphic designer, WordPress developer, brand identity, Iowa City">
+    <meta name="author" content="Rochell Hatfield">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rochell Hatfield | Digital Marketing, Web Design & Graphic Design">
+    <meta property="og:description" content="Digital marketing, web design, and brand visuals for growing businesses. View case studies, deliverables, and results.">
+    <meta property="og:url" content="https://rochellhatfield.com">
+    
+    <title>Rochell Hatfield | Digital Marketing, Web Design & Graphic Design</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data - Person Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rochell Hatfield",
+      "jobTitle": ["Digital Marketing Designer", "Web Designer", "Graphic Designer"],
+      "description": "Digital marketing designer specializing in brand-aligned web experiences, campaign creative, and conversion-focused design systems.",
+      "url": "https://rochellhatfield.com/",
+      "email": "rochellhatfield@gmail.com",
+      "telephone": "+1-319-333-9684",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Coralville",
+        "addressRegion": "IA",
+        "addressCountry": "US"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Eastern Washington University"
+      },
+      "knowsAbout": [
+        "Digital Marketing",
+        "Web Design",
+        "Graphic Design",
+        "WordPress Development",
+        "Brand Identity",
+        "User Experience Design",
+        "WCAG 2.1 AA Accessibility",
+        "SEO",
+        "Social Media Marketing"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/rochell-hatfield-7b02001ab"
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #6B4E3D;
+            --coral: #FF9B9B;
+            --peach: #FFB88C;
+            --yellow: #FFD97D;
+            --mint: #A8E6CF;
+            --cyan: #89CFF0;
+            --lavender: #C9B4E5;
+            --cream: #FFF5E8;
+            --bg-light: #FFFBF5;
+            --text-body: #8B6F5C;
+            --border: #FFE8DB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Skip to main content link for keyboard navigation */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            z-index: 200;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-light);
+            color: var(--primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1.2rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--coral);
+            outline: none;
+        }
+
+        .nav-links a:focus {
+            outline: 3px solid var(--coral);
+            outline-offset: 2px;
+        }
+
+        .resume-btn {
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 155, 155, 0.3);
+        }
+
+        /* Dropdown Menu */
+        .nav-item {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            min-width: 280px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            z-index: 200;
+        }
+
+        .nav-item:hover .dropdown-menu,
+        .nav-item:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--cream);
+            color: var(--coral);
+        }
+
+        .dropdown-toggle::after {
+            content: ' ▼';
+            font-size: 0.7rem;
+            margin-left: 0.3rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(100px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 155, 155, 0.4);
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 155, 155, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.9);
+            padding: 3rem 2rem 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: var(--coral);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Global focus styles for accessibility */
+        a:focus,
+        button:focus {
+            outline: 3px solid var(--coral);
+            outline-offset: 2px;
+        }
+
+        /* Focus visible for all interactive elements */
+        *:focus-visible {
+            outline: 3px solid var(--coral);
+            outline-offset: 2px;
+        }
+
+        .hero {
+            margin-top: 80px;
+            padding: 5rem 2rem 4rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--bg-light) 30%, rgba(255, 215, 125, 0.15) 60%, rgba(168, 230, 207, 0.15) 100%);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 155, 155, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero-content h1 .highlight {
+            background: linear-gradient(120deg, var(--coral), var(--lavender));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .positioning {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .proof-line {
+            background: white;
+            border-left: 4px solid var(--coral);
+            padding: 1.5rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 10px rgba(255, 155, 155, 0.15);
+        }
+
+        .proof-line p {
+            font-size: 1.05rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .proof-line p:last-child {
+            margin-bottom: 0;
+        }
+
+        .proof-line strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 15px rgba(255, 155, 155, 0.3);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 155, 155, 0.4);
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-left: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .cta-secondary:hover {
+            opacity: 0.7;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, var(--coral), var(--lavender));
+            opacity: 0.25;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: -40px;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, var(--yellow), var(--mint));
+            opacity: 0.3;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(255, 155, 155, 0.25);
+            border: 3px solid var(--peach);
+        }
+
+        .clients {
+            padding: 3rem 2rem;
+            background: linear-gradient(90deg, 
+                rgba(255, 155, 155, 0.1) 0%, 
+                rgba(255, 215, 125, 0.1) 25%, 
+                rgba(168, 230, 207, 0.1) 50%, 
+                rgba(137, 207, 240, 0.1) 75%, 
+                rgba(201, 180, 229, 0.1) 100%);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .clients-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .clients-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .client-names {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .case-studies {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-header::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--yellow), var(--mint), var(--lavender));
+            border-radius: 2px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.15rem;
+            color: var(--primary);
+            max-width: 600px;
+        }
+
+        .case-study {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .case-study:hover {
+            box-shadow: 0 10px 40px rgba(255, 155, 155, 0.2);
+            border-color: var(--coral);
+        }
+
+        .case-meta {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .meta-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .meta-value {
+            font-size: 1.05rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .case-study h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-description {
+            font-size: 1.05rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(255, 215, 125, 0.2), rgba(168, 230, 207, 0.2), rgba(201, 180, 229, 0.2));
+            border-radius: 8px;
+            border: 1px solid rgba(255, 155, 155, 0.2);
+        }
+
+        .result-item {
+            text-align: center;
+        }
+
+        .result-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(120deg, var(--coral), var(--cyan), var(--lavender));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Fraunces', serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        .role-list {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .role-tag {
+            background: var(--bg-light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .services {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--bg-light) 100%);
+            color: var(--primary);
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--coral), var(--peach), var(--yellow), var(--mint), var(--cyan), var(--lavender));
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service {
+            padding: 2.5rem;
+            background: white;
+            border: 3px solid transparent;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--yellow), var(--mint), var(--lavender));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+            border-color: var(--coral);
+        }
+
+        .service:hover::before {
+            opacity: 1;
+        }
+
+        .service h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .service h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--coral), var(--yellow));
+            border-radius: 2px;
+        }
+
+        .service p {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .deliverables {
+            list-style: none;
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        .deliverables li {
+            padding: 0.5rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .deliverables li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--coral);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .about {
+            padding: 6rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-top: 1rem;
+        }
+
+        .about h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--yellow), var(--mint), var(--lavender));
+            border-radius: 2px;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--primary);
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .credentials {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .credentials h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .credential-item strong {
+            display: block;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .credential-item span {
+            display: block;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .contact {
+            background: linear-gradient(180deg, var(--cream) 0%, rgba(255, 215, 125, 0.1) 50%, white 100%);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-subtitle {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.2s ease;
+        }
+
+        .contact-method:hover {
+            border-color: var(--coral);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 155, 155, 0.25);
+        }
+
+        .contact-method img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .availability {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .availability h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .availability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .availability-item strong {
+            display: block;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .availability-item span {
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .download-resume {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, var(--coral), var(--peach), var(--yellow));
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 155, 155, 0.35);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .download-resume:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 155, 155, 0.45);
+        }
+
+        .download-resume img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1);
+        }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 968px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .case-study {
+                padding: 2rem;
+            }
+
+            .cta-secondary {
+                margin-left: 0;
+                margin-top: 1rem;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 3rem 1.5rem 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .positioning {
+                font-size: 1.15rem;
+            }
+
+            .section-header h2,
+            .about h2,
+            .contact h2,
+            .services h2 {
+                font-size: 2rem;
+            }
+
+            .case-study {
+                padding: 1.5rem;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="/img/creative-design-studio-design-banner.png" alt="Rochell Hatfield Creative Studio">
+            </a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#work" class="dropdown-toggle">Work</a>
+                    <div class="dropdown-menu">
+                        <a href="case-study-iowa-city-coffee.html">Loyalty Program Redesign</a>
+                        <a href="case-study-bird-house.html">The Bird House Rebrand</a>
+                        <a href="case-study-humane-society.html">Humane Society Website</a>
+                        <a href="case-study-social-media.html">Social Media Strategy</a>
+                    </div>
+                </li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" class="resume-btn" download>Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <h1 id="hero-heading">Rochell Hatfield: Digital Marketing, Web Design & Graphic Design for Growing Businesses</h1>
+                <p class="positioning">
+                    Digital marketing designer specializing in brand-aligned web experiences, 
+                    campaign creative, and conversion-focused design systems.
+                </p>
+                <div class="proof-line">
+                    <p><strong>Recent outcomes:</strong></p>
+                    <p>Redesigned loyalty program → higher customer spend & retention</p>
+                    <p>Full nonprofit rebrand → cohesive identity across web & print</p>
+                    <p>Multi-site WordPress systems → faster updates, consistent brand</p>
+                </div>
+                <a href="#contact" class="cta-primary">Get In Touch</a>
+                <a href="#work" class="cta-secondary">View Work →</a>
+            </div>
+            <div class="hero-image">
+                <img src="/img/avatar.png" alt="Rochell Hatfield - Digital Marketing Designer">
+            </div>
+        </div>
+    </section>
+
+    <section class="clients" aria-label="Trusted clients">
+        <div class="clients-container">
+            <p class="clients-title">Trusted by</p>
+            <div class="client-names">
+                <span>Vortex Digital Marketing</span>
+                <span>Iowa City Coffee Company</span>
+                <span>The Bird House</span>
+                <span>Easton Digital</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-studies" id="work" aria-labelledby="work-heading">
+        <div class="section-header">
+            <h2 id="work-heading">Selected Work</h2>
+            <p>Case studies demonstrating strategic thinking, execution quality, and measurable impact.</p>
+        </div>
+
+        <div class="case-study">
+            <div class="case-meta">
+                <div class="meta-item">
+                    <p class="meta-label">Client</p>
+                    <p class="meta-value">Iowa City Coffee Company</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Timeline</p>
+                    <p class="meta-value">12 months</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Role</p>
+                    <p class="meta-value">Digital Marketing Director</p>
+                </div>
+            </div>
+            
+            <h3>Loyalty Program Redesign & Multi-Channel Marketing</h3>
+            
+            <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <img src="/img/Perky Points Loyalty Rewards System.jpg" alt="Loyalty rewards POS interface design showing simplified user flow" style="width: 100%; display: block;">
+            </div>
+            
+            <p class="case-description">
+                <strong>Challenge:</strong> Coffee shop chain needed to increase customer retention and average order value across 4 locations with inconsistent branding and an underperforming loyalty system.
+            </p>
+            <p class="case-description">
+                <strong>Approach:</strong> Conducted customer research to identify friction points in existing loyalty flow. Redesigned rewards structure to prioritize customer satisfaction over complexity. Led complete creative strategy across web (4 sites), social, email, in-store collateral, and POS interface. Established unified brand standards and design system for all touchpoints.
+            </p>
+            
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-number">↑32%</div>
+                    <p class="result-label">Customer revisit rate</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">↑24%</div>
+                    <p class="result-label">Avg spend per customer</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">4</div>
+                    <p class="result-label">Websites unified</p>
+                </div>
+            </div>
+
+            <p class="case-description">
+                <strong>Key deliverables:</strong> Loyalty program UI/UX, email automation flows, social content calendar, Google/Meta ad creative, promotional video, photography direction, seasonal campaigns, brand guidelines.
+            </p>
+            
+            <p class="case-description">
+                <a href="case-study-iowa-city-coffee.html" style="color: var(--coral); font-weight: 600; text-decoration: none; font-size: 1.05rem;">Read full case study →</a>
+            </p>
+
+            <div class="role-list">
+                <span class="role-tag">Strategy</span>
+                <span class="role-tag">Web Design</span>
+                <span class="role-tag">Graphic Design</span>
+                <span class="role-tag">Copywriting</span>
+                <span class="role-tag">Video Production</span>
+                <span class="role-tag">SEO</span>
+                <span class="role-tag">Analytics</span>
+            </div>
+        </div>
+
+        <div class="case-study">
+            <div class="case-meta">
+                <div class="meta-item">
+                    <p class="meta-label">Client</p>
+                    <p class="meta-value">The Bird House (Hospice Home)</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Timeline</p>
+                    <p class="meta-value">6 months</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Role</p>
+                    <p class="meta-value">Lead Designer & Developer</p>
+                </div>
+            </div>
+            
+            <h3>Complete Nonprofit Rebrand & Website</h3>
+            
+            <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <img src="/img/bird-house-design-image1.jpg" alt="The Bird House website design iterations showing brand evolution" style="width: 100%; display: block;">
+            </div>
+            
+            <p class="case-description">
+                <strong>Challenge:</strong> Johnson County's hospice home needed a full rebrand to better communicate their mission, attract donors, and serve families with clarity and compassion.
+            </p>
+            <p class="case-description">
+                <strong>Approach:</strong> Partnered directly with business director to understand organizational needs, donor psychology, and family concerns. Created new visual identity emphasizing warmth, trust, and professionalism. Designed brand system with flexible applications for digital and print. Built accessible, conversion-focused website with clear donor pathways and family resource sections.
+            </p>
+            
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-number">100%</div>
+                    <p class="result-label">Brand consistency achieved</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">↑45%</div>
+                    <p class="result-label">Website engagement</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">WCAG 2.1 AA</div>
+                    <p class="result-label">Accessibility standard met</p>
+                </div>
+            </div>
+
+            <p class="case-description">
+                <strong>Key deliverables:</strong> Logo design, brand guidelines, color palette & typography system, website design & development (WordPress), donation flow optimization, print collateral templates, social media assets.
+            </p>
+            
+            <p class="case-description">
+                <a href="case-study-bird-house.html" style="color: var(--coral); font-weight: 600; text-decoration: none; font-size: 1.05rem;">Read full case study →</a>
+            </p>
+
+            <div class="role-list">
+                <span class="role-tag">Brand Identity</span>
+                <span class="role-tag">UX Research</span>
+                <span class="role-tag">Web Design</span>
+                <span class="role-tag">WordPress Development</span>
+                <span class="role-tag">WCAG 2.1 AA</span>
+            </div>
+        </div>
+
+        <div class="case-study">
+            <div class="case-meta">
+                <div class="meta-item">
+                    <p class="meta-label">Client</p>
+                    <p class="meta-value">Second Chance Humane Society</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Timeline</p>
+                    <p class="meta-value">Academic Project (2020)</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Role</p>
+                    <p class="meta-value">UX Researcher & Designer</p>
+                </div>
+            </div>
+            
+            <h3>Humane Society Website Design: Increasing Adoptions Through Strategic UX</h3>
+            
+            <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <img src="/img/humane-society-website-image9.jpg" alt="Second Chance Humane Society website design mockup" style="width: 100%; display: block;">
+            </div>
+            
+            <p class="case-description">
+                <strong>Challenge:</strong> Animal shelter needed a website that would increase adoption rates by addressing common user barriers (behavioral concerns, fee anxieties) while optimizing donation flows to sustain operations.
+            </p>
+            <p class="case-description">
+                <strong>Approach:</strong> Conducted comprehensive user research using AVMA demographic data, competitive analysis of Washington state shelters, and stakeholder interviews. Developed user personas and journey maps based on data showing that 15% of non-adopters avoided shelters due to behavioral concerns. Designed information architecture that proactively addresses misconceptions, streamlines the adoption process, and makes donations frictionless.
+            </p>
+            
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-number">15%</div>
+                    <p class="result-label">Behavioral concerns addressed</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">3</div>
+                    <p class="result-label">User personas developed</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">Self-Service</div>
+                    <p class="result-label">Adoption process</p>
+                </div>
+            </div>
+
+            <p class="case-description">
+                <strong>Key insights:</strong> Research revealed that individual donations are the primary revenue source for shelters, and average shelter stays were 29.6 days for dogs and 45.5 days for cats. Designed dual focus on adoption conversion AND donor optimization to support organizational sustainability.
+            </p>
+            
+            <p class="case-description">
+                <a href="case-study-humane-society.html" style="color: var(--coral); font-weight: 600; text-decoration: none; font-size: 1.05rem;">Read full case study →</a>
+            </p>
+
+            <div class="role-list">
+                <span class="role-tag">User Research</span>
+                <span class="role-tag">User Personas</span>
+                <span class="role-tag">Journey Mapping</span>
+                <span class="role-tag">Information Architecture</span>
+                <span class="role-tag">UX Design</span>
+                <span class="role-tag">Content Strategy</span>
+            </div>
+        </div>
+
+        <div class="case-study">
+            <div class="case-meta">
+                <div class="meta-item">
+                    <p class="meta-label">Client</p>
+                    <p class="meta-value">Iowa City Coffee Company</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Timeline</p>
+                    <p class="meta-value">12 months</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Role</p>
+                    <p class="meta-value">Social Media Manager</p>
+                </div>
+            </div>
+            
+            <h3>Social Media Strategy & Multi-Platform Content Creation</h3>
+            
+            <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <img src="/img/social-media-image2.jpg" alt="Java House Instagram social media content showcasing brand storytelling" style="width: 100%; display: block;">
+            </div>
+            
+            <p class="case-description">
+                <strong>Challenge:</strong> Coffee shop chain needed cohesive social media presence across six platforms (Instagram, Facebook, TikTok, Pinterest, YouTube, Twitter) to reach younger demographics and build community engagement beyond promotional content.
+            </p>
+            <p class="case-description">
+                <strong>Approach:</strong> Developed comprehensive multi-platform content strategy with platform-specific tactics. Created content pillars balancing brand heritage, product highlights, community connection, and behind-the-scenes storytelling. Managed photography direction, copywriting, content calendar, and community engagement across all channels. Integrated social campaigns with loyalty program launch.
+            </p>
+            
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-number">6</div>
+                    <p class="result-label">Platforms managed</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">121+</div>
+                    <p class="result-label">Likes on top posts</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">Daily</div>
+                    <p class="result-label">Community engagement</p>
+                </div>
+            </div>
+
+            <p class="case-description">
+                <strong>Key deliverables:</strong> Content strategy, photography direction, copywriting, community management, Instagram Stories/Reels, TikTok videos, content calendar, multi-platform scheduling, analytics reporting.
+            </p>
+            
+            <p class="case-description">
+                <a href="case-study-social-media.html" style="color: var(--coral); font-weight: 600; text-decoration: none; font-size: 1.05rem;">Read full case study →</a>
+            </p>
+
+            <div class="role-list">
+                <span class="role-tag">Content Strategy</span>
+                <span class="role-tag">Photography</span>
+                <span class="role-tag">Copywriting</span>
+                <span class="role-tag">Community Management</span>
+                <span class="role-tag">Instagram</span>
+                <span class="role-tag">TikTok</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services" aria-labelledby="services-heading">
+        <div class="services-container">
+            <h2 id="services-heading">Services & Capabilities</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Web Design & Development</h3>
+                    <p>Conversion-focused websites built on WordPress, HTML/CSS/JavaScript. Mobile-first, accessible (WCAG 2.1 AA), optimized for speed and SEO.</p>
+                    <ul class="deliverables">
+                        <li>Responsive website design</li>
+                        <li>Landing page optimization</li>
+                        <li>WordPress custom themes</li>
+                        <li>Component & design systems</li>
+                        <li>WCAG 2.1 AA compliance</li>
+                    </ul>
+                </div>
+
+                <div class="service">
+                    <h3>Digital Marketing Creative</h3>
+                    <p>Campaign creative designed for performance across paid search, social, email, and display advertising.</p>
+                    <ul class="deliverables">
+                        <li>Google Ads & Meta ad creative</li>
+                        <li>Email design & automation flows</li>
+                        <li>Social content & templates</li>
+                        <li>Landing pages tied to campaigns</li>
+                        <li>A/B testing & iteration</li>
+                    </ul>
+                </div>
+
+                <div class="service">
+                    <h3>Brand & Graphic Design</h3>
+                    <p>Strategic brand systems and production-ready design for print, digital, and environmental applications.</p>
+                    <ul class="deliverables">
+                        <li>Brand identity & guidelines</li>
+                        <li>Print collateral (signage, direct mail)</li>
+                        <li>Presentation & pitch decks</li>
+                        <li>Social media assets</li>
+                        <li>Packaging & promotional materials</li>
+                    </ul>
+                </div>
+
+                <div class="service">
+                    <h3>Video & Motion Design</h3>
+                    <p>Short-form video editing and motion graphics for social, web, and advertising using Adobe Premiere & After Effects.</p>
+                    <ul class="deliverables">
+                        <li>Social video editing</li>
+                        <li>Promotional videos</li>
+                        <li>Motion graphics & animation</li>
+                        <li>Video ad creative</li>
+                        <li>Brand storytelling content</li>
+                    </ul>
+                </div>
+
+                <div class="service">
+                    <h3>SEO & Analytics</h3>
+                    <p>On-page optimization, performance monitoring, and data-informed iteration to improve visibility and conversions.</p>
+                    <ul class="deliverables">
+                        <li>Keyword research & implementation</li>
+                        <li>Technical SEO audits</li>
+                        <li>Google Analytics setup & reporting</li>
+                        <li>Conversion tracking & optimization</li>
+                        <li>Performance recommendations</li>
+                    </ul>
+                </div>
+
+                <div class="service">
+                    <h3>Social Media Strategy</h3>
+                    <p>Content planning, creative direction, community management, and paid campaign execution across platforms.</p>
+                    <ul class="deliverables">
+                        <li>Content calendar & strategy</li>
+                        <li>Graphic design & copywriting</li>
+                        <li>Paid social campaigns</li>
+                        <li>Community management</li>
+                        <li>Performance reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <div class="about-content">
+            <p>
+                I'm a digital marketing designer with <strong>5+ years creating conversion-focused campaigns</strong> across web, social, email, and print. My work bridges strategic thinking and hands-on execution—I handle research, wireframing, design systems, front-end development, and performance optimization.
+            </p>
+            <p>
+                I've led full rebrands, built scalable WordPress systems, optimized loyalty programs for retention, and directed creative for multi-channel campaigns. I approach every project with a focus on <strong>measurable outcomes</strong>: conversions, engagement, clarity, and brand consistency.
+            </p>
+            <p>
+                My technical foundation includes HTML, CSS, JavaScript, WordPress development, Adobe Creative Suite, Figma, and Google Analytics. I build to <strong>WCAG 2.1 AA standards</strong> (semantic HTML, keyboard navigation, proper contrast, screen reader compatibility) and stay current with SEO best practices and conversion optimization principles.
+            </p>
+        </div>
+
+        <div class="credentials">
+            <h4>Education & Tools</h4>
+            <div class="credentials-grid">
+                <div class="credential-item">
+                    <strong>Bachelor of Design</strong>
+                    <span>Eastern Washington University</span>
+                    <span>Visual Communications</span>
+                </div>
+                <div class="credential-item">
+                    <strong>Certificate</strong>
+                    <span>User Experience & Interface</span>
+                    <span>Eastern Washington University</span>
+                </div>
+                <div class="credential-item">
+                    <strong>Design Tools</strong>
+                    <span>Adobe Creative Suite, Figma, Canva</span>
+                </div>
+                <div class="credential-item">
+                    <strong>Development</strong>
+                    <span>HTML/CSS/JS, WordPress, Git</span>
+                </div>
+                <div class="credential-item">
+                    <strong>Marketing Platforms</strong>
+                    <span>Google Ads, Meta, Analytics, Asana</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="about.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(255, 155, 155, 0.3);">Learn More About Me →</a>
+        </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <div class="contact-container">
+            <h2 id="contact-heading">Let's Work Together</h2>
+            <p class="contact-subtitle">
+                Available for freelance projects and full-time opportunities in Iowa City, Quad Cities, or Muscatine.
+            </p>
+
+            <div class="contact-methods">
+                <a href="/cdn-cgi/l/email-protection#7b091418131e1717131a0f1d121e171f3b1c161a121755181416" class="contact-method" aria-label="Email Rochell Hatfield">
+                    <img src="/img/email_icon.png" alt="" aria-hidden="true">
+                    <span><span class="__cf_email__" data-cfemail="5d2f323e35383131353c293b343831391d3a303c3431733e3230">[email&#160;protected]</span></span>
+                </a>
+                <a href="tel:319-333-9684" class="contact-method" aria-label="Call Rochell Hatfield at 319-333-9684">
+                    <img src="/img/phone icon-07.png" alt="" aria-hidden="true">
+                    <span>319-333-9684</span>
+                </a>
+            </div>
+
+            <a href="/cdn-cgi/l/email-protection#80f2efe3e8e5ecece8e1f4e6e9e5ece4c0e7ede1e9ecaee3efed" class="cta-primary">Start a Conversation</a>
+            
+            <a href="#" class="download-resume" aria-label="Download Rochell Hatfield's resume as PDF">
+                <img src="/img/pdf_icon.png" alt="" aria-hidden="true">
+                Download Resume
+            </a>
+
+            <div class="availability">
+                <h4>Availability & Location</h4>
+                <div class="availability-grid">
+                    <div class="availability-item">
+                        <strong>Status</strong>
+                        <span>Available Now</span>
+                    </div>
+                    <div class="availability-item">
+                        <strong>Location</strong>
+                        <span>Coralville, IA</span>
+                    </div>
+                    <div class="availability-item">
+                        <strong>Work Type</strong>
+                        <span>Onsite or Remote</span>
+                    </div>
+                    <div class="availability-item">
+                        <strong>Authorization</strong>
+                        <span>US Work Authorized</span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rochell Hatfield</h3>
+                <p>Creative digital marketing designer specializing in brand identity, web design, and strategic campaigns.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/rochell-hatfield/" target="_blank" aria-label="LinkedIn">in</a>
+                    <a href="https://www.instagram.com/rh.creative_studio.design/?hl=en" target="_blank" aria-label="Instagram">📷</a>
+                    <a href="https://www.facebook.com/rochell.yazzie.3" target="_blank" aria-label="Facebook">f</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="rochell-hatfield-portfolio.html">Home</a></li>
+                    <li><a href="rochell-hatfield-portfolio.html#work">Portfolio</a></li>
+                    <li><a href="rochell-hatfield-portfolio.html#services">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="rochell-hatfield-portfolio.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Case Studies</h3>
+                <ul class="footer-links">
+                    <li><a href="case-study-iowa-city-coffee.html">Loyalty Program Redesign</a></li>
+                    <li><a href="case-study-bird-house.html">The Bird House Rebrand</a></li>
+                    <li><a href="case-study-humane-society.html">Humane Society Website</a></li>
+                    <li><a href="case-study-social-media.html">Social Media Strategy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get In Touch</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:rochellhatfield@gmail.com">rochellhatfield@gmail.com</a></li>
+                    <li><a href="tel:319-333-9684">319-333-9684</a></li>
+                    <li>Coralville, IA</li>
+                    <li><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" download>Download Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rochell Hatfield. All rights reserved. | Designed & developed by Rochell Hatfield</p>
+        </div>
+    </footer>
+
+    <script>
+        // Back to top button functionality
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > window.innerHeight * 0.9) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete nonprofit rebrand and website redesign for The Bird House hospice home: 45% increase in website engagement and 100% brand consistency through strategic brand identity design and accessible WordPress development by Rochell Hatfield.">
+    <meta name="keywords" content="nonprofit branding, hospice branding, website redesign, WCAG accessibility, WordPress development, Rochell Hatfield">
+    <meta name="author" content="Rochell Hatfield">
+    
+    <title>Nonprofit Rebrand Case Study: The Bird House | Rochell Hatfield</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data - Case Study -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "The Bird House Complete Nonprofit Rebrand",
+      "author": {
+        "@type": "Person",
+        "name": "Rochell Hatfield"
+      },
+      "description": "Complete brand identity redesign and accessible website for Johnson County hospice home, resulting in 45% increase in engagement",
+      "keywords": "nonprofit branding, brand identity, web design, WCAG accessibility",
+      "datePublished": "2023-02-01"
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #6B4E3D;
+            --coral: #FF9B9B;
+            --peach: #FFB88C;
+            --yellow: #FFD97D;
+            --mint: #A8E6CF;
+            --cyan: #89CFF0;
+            --lavender: #C9B4E5;
+            --cream: #FFF5E8;
+            --bg-light: #FFFBF5;
+            --text-body: #8B6F5C;
+            --border: #FFE8DB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-light);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1.2rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--coral);
+            outline: none;
+        }
+
+        .nav-links a:focus {
+            outline: 3px solid var(--coral);
+            outline-offset: 2px;
+        }
+
+        .resume-btn {
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 155, 155, 0.3);
+        }
+
+        /* Dropdown Menu */
+        .nav-item {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            min-width: 280px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            z-index: 200;
+        }
+
+        .nav-item:hover .dropdown-menu,
+        .nav-item:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--cream);
+            color: var(--coral);
+        }
+
+        .dropdown-toggle::after {
+            content: ' ▼';
+            font-size: 0.7rem;
+            margin-left: 0.3rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(100px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 155, 155, 0.4);
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 155, 155, 0.6);
+        }
+
+        body {
+            padding-top: 80px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--coral);
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .meta-item strong {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .meta-item span {
+            color: var(--primary);
+        }
+
+        .results-highlight {
+            background: linear-gradient(135deg, rgba(255, 215, 125, 0.2), rgba(168, 230, 207, 0.2));
+            border-left: 4px solid var(--coral);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .result-item {
+            text-align: center;
+        }
+
+        .result-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(120deg, var(--coral), var(--cyan), var(--lavender));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Fraunces', serif;
+        }
+
+        .result-label {
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-top: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .tag-list {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .tag {
+            background: var(--cream);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+        }
+
+        .cta-section {
+            background: white;
+            border: 2px solid var(--coral);
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 155, 155, 0.4);
+        }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="rochell-hatfield-portfolio.html" class="logo">
+                <img src="/img/creative-design-studio-design-banner.png" alt="Rochell Hatfield Creative Studio">
+            </a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="rochell-hatfield-portfolio.html#work" class="dropdown-toggle">Work</a>
+                    <div class="dropdown-menu">
+                        <a href="case-study-iowa-city-coffee.html">Loyalty Program Redesign</a>
+                        <a href="case-study-bird-house.html">The Bird House Rebrand</a>
+                        <a href="case-study-humane-society.html">Humane Society Website</a>
+                        <a href="case-study-social-media.html">Social Media Strategy</a>
+                    </div>
+                </li>
+                <li><a href="rochell-hatfield-portfolio.html#services">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rochell-hatfield-portfolio.html#contact">Contact</a></li>
+                <li><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" class="resume-btn" download>Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / <a href="index.html#work">Work</a> / The Bird House
+        </div>
+
+        <h1>Complete Nonprofit Rebrand & Website</h1>
+
+        <div class="meta">
+            <div class="meta-item">
+                <strong>Client</strong>
+                <span>The Bird House (Hospice Home)</span>
+            </div>
+            <div class="meta-item">
+                <strong>Timeline</strong>
+                <span>6 months (Aug 2022 - Feb 2023)</span>
+            </div>
+            <div class="meta-item">
+                <strong>Role</strong>
+                <span>Lead Designer & Developer</span>
+            </div>
+        </div>
+
+        <div class="results-highlight">
+            <h2 style="margin-top: 0;">Results</h2>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-number">100%</div>
+                    <p class="result-label">Brand consistency achieved</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">↑45%</div>
+                    <p class="result-label">Website engagement</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">WCAG 2.1 AA</div>
+                    <p class="result-label">Accessibility standard met</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>The Challenge</h2>
+        <p>The Bird House, Johnson County's only residential hospice home, faced multiple challenges that prevented them from effectively serving families and attracting donors:</p>
+        
+        <h3>Visual Design Issues</h3>
+        <ul>
+            <li><strong>Outdated appearance:</strong> The existing website presented an unprofessional visual design that didn't reflect the quality of care provided</li>
+            <li><strong>Weak brand identity:</strong> Inconsistent branding across materials undermined credibility</li>
+            <li><strong>Poor visual hierarchy:</strong> Lack of structure made it difficult for users to find critical information quickly</li>
+        </ul>
+
+        <h3>Content & SEO Problems</h3>
+        <ul>
+            <li><strong>Thin copywriting:</strong> Content lacked essential keywords and detailed information</li>
+            <li><strong>Low searchability:</strong> Poor SEO made it difficult for families to find The Bird House when searching for hospice care</li>
+            <li><strong>Missing back-end optimization:</strong> Lack of meta tags and structured data hurt search engine visibility</li>
+        </ul>
+
+        <h3>Usability & Accessibility Concerns</h3>
+        <ul>
+            <li><strong>Poor information architecture:</strong> Confusing navigation structure prevented users from completing key tasks</li>
+            <li><strong>Accessibility gaps:</strong> Did not meet WCAG compliance standards, excluding users with disabilities</li>
+            <li><strong>Donation friction:</strong> Unclear pathways to donate made it difficult to convert supporter intent into action</li>
+        </ul>
+
+        <h2>Discovery & Research</h2>
+        <p>I partnered directly with the business director to understand The Bird House's unique position as a marketplace connecting families with qualified hospice care. Through stakeholder interviews and user research, I identified three primary audiences with distinct needs:</p>
+        
+        <h3>Target Audiences</h3>
+        <ul>
+            <li><strong>Families in Crisis:</strong> Need clear, compassionate information quickly during emotionally difficult moments</li>
+            <li><strong>Potential Donors:</strong> Want to understand impact, mission alignment, and giving options before contributing</li>
+            <li><strong>Healthcare Referrers:</strong> Require professional resources, admission criteria, and contact information</li>
+        </ul>
+
+        <h3>Project Goals</h3>
+        <p>Based on research, I established three primary objectives:</p>
+        <ol>
+            <li><strong>Improve information architecture</strong> to guide users efficiently, with emphasis on the donations feature</li>
+            <li><strong>Amplify brand identity</strong> through cohesive visual design to boost professionalism and trust</li>
+            <li><strong>Increase SEO visibility</strong> through keyword-optimized copywriting (front-end and back-end) to help Google identify and recommend The Bird House services</li>
+        </ol>
+
+        <p>The ultimate goal: Increase revenue while presenting an appealing, professional site that attracts clients, families, and business investors.</p>
+
+        <h2>Brand Identity Development</h2>
+        
+        <h3>Color Psychology & Visual Strategy</h3>
+        <p>I developed a blue/green color scheme against a white background to convey specific emotional qualities:</p>
+        <ul>
+            <li><strong>Blue tones:</strong> Trust, professionalism, and calm</li>
+            <li><strong>Green tones:</strong> Hope, healing, and renewal</li>
+            <li><strong>White space:</strong> Cleanliness, clarity, and breathing room during stressful decisions</li>
+        </ul>
+
+        <h3>Typography & Hierarchy</h3>
+        <p>I established a clear typographic system that:</p>
+        <ul>
+            <li>Used size and weight to create information hierarchy</li>
+            <li>Ensured readability for users in emotional distress</li>
+            <li>Met WCAG AA contrast requirements (high-ranking compliance)</li>
+            <li>Scaled appropriately across all viewport sizes</li>
+        </ul>
+
+        <h3>Brand System Components</h3>
+        <p>I created comprehensive brand guidelines including:</p>
+        <ul>
+            <li>Logo design with symbolic elements representing care and home</li>
+            <li>Primary and secondary color palettes with usage rules</li>
+            <li>Typography system for digital and print applications</li>
+            <li>Photography guidelines (tone, subject matter, composition)</li>
+            <li>Voice and tone guidelines for compassionate copywriting</li>
+            <li>Templates for common materials (brochures, donation forms, social posts)</li>
+        </ul>
+
+        <h2>Website Design & Development</h2>
+        
+        <h3>Information Architecture</h3>
+        <p>I restructured the site to serve three distinct user journeys:</p>
+        <ul>
+            <li><strong>For Families:</strong> Clear path to services, FAQs, and contact</li>
+            <li><strong>For Donors:</strong> Impact stories, donation options, and ways to give</li>
+            <li><strong>For Professionals:</strong> Referral process, medical criteria, and resources</li>
+        </ul>
+
+        <h3>Visual Design Iterations</h3>
+        <p>I developed three design concepts, each exploring different approaches to balance professionalism with compassion:</p>
+
+        <div style="margin: 3rem 0;">
+            <img src="/img/bird-house-designs-all-three.png" alt="The Bird House website design iterations showing three different homepage concepts with varying color schemes and layouts" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+            <p style="font-size: 0.9rem; color: var(--text-body); font-style: italic; text-align: center;">Three design iterations exploring color, typography, and layout approaches</p>
+        </div>
+
+        <p><strong>Final Design Direction:</strong> The selected design (Middle concept) featured:</p>
+        <ul>
+            <li>Navy blue and warm gold color palette for trust and warmth</li>
+            <li>Large, welcoming photography to create emotional connection</li>
+            <li>Clear visual hierarchy with prominent "Donate" call-to-action</li>
+            <li>Clean, modern layout that balances information density with white space</li>
+        </ul>
+
+        <h3>Accessibility Implementation</h3>
+        <p>As a hospice resource, accessibility was critical. I ensured WCAG 2.1 AA compliance through:</p>
+        <ul>
+            <li>Semantic HTML structure for screen readers</li>
+            <li>Proper color contrast ratios (minimum 4.5:1)</li>
+            <li>Keyboard navigation support</li>
+            <li>Descriptive alt text for all images</li>
+            <li>Clear focus indicators</li>
+            <li>Mobile-responsive design that works on all devices</li>
+        </ul>
+
+        <h3>Donation Flow Optimization</h3>
+        <p>I redesigned the donation experience to reduce friction:</p>
+        <ul>
+            <li>Simplified form with minimal required fields</li>
+            <li>Multiple giving options (one-time, monthly, memorial)</li>
+            <li>Clear impact messaging ("Your $50 provides...")</li>
+            <li>Mobile-optimized payment process</li>
+            <li>Automated thank-you emails with tax information</li>
+        </ul>
+
+        <h2>WordPress Development</h2>
+        <p>I built the site on WordPress to enable the team to make updates independently:</p>
+        <ul>
+            <li>Custom theme built to brand specifications</li>
+            <li>Modular page builder for easy content updates</li>
+            <li>Training and documentation for staff</li>
+            <li>SEO optimization for local search visibility</li>
+            <li>Integration with donation processing platform</li>
+        </ul>
+
+        <h2>Print Collateral Templates</h2>
+        <p>To ensure brand consistency, I created templates for:</p>
+        <ul>
+            <li>Donor thank-you cards</li>
+            <li>Family information packets</li>
+            <li>Professional referral materials</li>
+            <li>Event signage and promotional materials</li>
+            <li>Social media graphics</li>
+        </ul>
+
+        <div style="margin: 3rem 0;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 1rem;">
+                <img src="/img/bird-house-design-image6.jpg" alt="The Bird House brand collateral design" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="/img/bird-house-design-image3.jpg" alt="The Bird House print materials" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-body); font-style: italic; text-align: center;">Brand application across print collateral and marketing materials</p>
+        </div>
+
+        <h2>Key Deliverables</h2>
+        <div class="tag-list">
+            <span class="tag">Logo Design</span>
+            <span class="tag">Brand Guidelines</span>
+            <span class="tag">Color & Typography System</span>
+            <span class="tag">WordPress Website</span>
+            <span class="tag">WCAG 2.1 AA Compliance</span>
+            <span class="tag">Donation Flow</span>
+            <span class="tag">Print Templates</span>
+            <span class="tag">Social Media Assets</span>
+            <span class="tag">Photography Guidelines</span>
+            <span class="tag">Staff Training</span>
+        </div>
+
+        <h2>Impact & Lessons Learned</h2>
+        <p>The rebrand successfully positioned The Bird House as a professional, compassionate resource for end-of-life care. Website engagement increased by 45%, and the organization reported improved donor confidence and increased inquiries from families.</p>
+
+        <p>This project reinforced the importance of empathy-driven design, especially for organizations serving vulnerable populations. Every design choice—from color selection to button placement—was made with the emotional state of the user in mind.</p>
+    </main>
+
+    <!-- Let's Work Together CTA -->
+    <section style="max-width: 900px; margin: 5rem auto; padding: 3rem 2rem; background: linear-gradient(135deg, var(--coral), var(--peach)); border-radius: 20px; text-align: center; color: white;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Let's Create Something Great Together</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Whether you need nonprofit branding, accessible web design, or a complete brand strategy—I'd love to hear about your project.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="rochell-hatfield-portfolio.html#contact" style="padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; background: white; color: var(--coral); transition: all 0.3s;">Start a Conversation</a>
+            <a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" download style="padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; transition: all 0.3s;">Download My Resume</a>
+        </div>
+    </section>
+
+    <!-- More Case Studies -->
+    <section style="max-width: 1200px; margin: 5rem auto; padding: 0 2rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; font-family: 'Fraunces', serif; color: var(--primary);">More Case Studies</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            
+            <!-- Iowa City Coffee Case Study -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                <img src="/img/Perky Points Loyalty Rewards System.jpg" alt="Loyalty program interface design" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); font-family: 'Fraunces', serif;">Loyalty Program Redesign</h3>
+                    <p style="color: var(--primary); margin-bottom: 1rem;">Multi-channel marketing campaign and UX redesign achieving 26% increase in loyalty participation and $6.32 boost in average spend.</p>
+                    <a href="case-study-iowa-city-coffee.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">View Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Humane Society Case Study -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                <img src="/img/MockupDevices.jpg" alt="Humane Society website design" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); font-family: 'Fraunces', serif;">Humane Society Website</h3>
+                    <p style="color: var(--primary); margin-bottom: 1rem;">Research-driven UX design addressing adoption barriers through user personas, wireframing, and strategic information architecture.</p>
+                    <a href="case-study-humane-society.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">View Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Social Media Case Study -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                <img src="/img/social-media-image2.jpg" alt="Social media content" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); font-family: 'Fraunces', serif;">Social Media Strategy</h3>
+                    <p style="color: var(--primary); margin-bottom: 1rem;">Multi-platform content creation and community management across Instagram, Facebook, TikTok, Pinterest, YouTube, and Twitter.</p>
+                    <a href="case-study-social-media.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">View Case Study →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+
+    <footer>
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; padding: 3rem 2rem 2rem; background: var(--primary); color: rgba(255,255,255,0.9);">
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Rochell Hatfield</h3>
+                <p style="line-height: 1.6;">Creative digital marketing designer specializing in brand identity, web design, and strategic campaigns.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <a href="https://www.linkedin.com/in/rochell-hatfield/" target="_blank" aria-label="LinkedIn" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">in</a>
+                    <a href="https://www.instagram.com/rh.creative_studio.design/?hl=en" target="_blank" aria-label="Instagram" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">📷</a>
+                    <a href="https://www.facebook.com/rochell.yazzie.3" target="_blank" aria-label="Facebook" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">f</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Quick Links</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html#work" style="color: rgba(255,255,255,0.7); text-decoration: none;">Portfolio</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html#services" style="color: rgba(255,255,255,0.7); text-decoration: none;">Services</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">About</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html#contact" style="color: rgba(255,255,255,0.7); text-decoration: none;">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Case Studies</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-iowa-city-coffee.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Loyalty Program Redesign</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-bird-house.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">The Bird House Rebrand</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-humane-society.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Humane Society Website</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-social-media.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Social Media Strategy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Get In Touch</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;"><a href="mailto:rochellhatfield@gmail.com" style="color: rgba(255,255,255,0.7); text-decoration: none;">rochellhatfield@gmail.com</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="tel:319-333-9684" style="color: rgba(255,255,255,0.7); text-decoration: none;">319-333-9684</a></li>
+                    <li style="margin-bottom: 0.5rem; color: rgba(255,255,255,0.7);">Coralville, IA</li>
+                    <li style="margin-bottom: 0.5rem;"><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" download style="color: rgba(255,255,255,0.7); text-decoration: none;">Download Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); background: var(--primary); padding-bottom: 2rem;">
+            <p>&copy; 2026 Rochell Hatfield. All rights reserved. | Designed & developed by Rochell Hatfield</p>
+        </div>
+    </footer>
+
+    <script>
+        // Back to top button functionality
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > window.innerHeight * 0.9) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

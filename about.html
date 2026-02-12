@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Rochell Hatfield - Creative digital marketing designer specializing in brand identity, web design, and multi-channel campaigns. Based in Iowa, bringing 5+ years of design expertise to growing businesses.">
+    <title>About Rochell Hatfield | Digital Marketing Designer & Brand Strategist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6B4E3D;
+            --coral: #FF9B9B;
+            --peach: #FFB88C;
+            --yellow: #FFD97D;
+            --mint: #A8E6CF;
+            --cyan: #89CFF0;
+            --lavender: #C9B4E5;
+            --cream: #FFF5E8;
+            --bg-light: #FFFBF5;
+            --text-body: #8B6F5C;
+            --border: #FFE8DB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-light);
+            color: var(--primary);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Sticky Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1.2rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--coral);
+            outline: none;
+        }
+
+        .nav-links a:focus {
+            outline: 3px solid var(--coral);
+            outline-offset: 2px;
+        }
+
+        .resume-btn {
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 155, 155, 0.3);
+        }
+
+        /* Dropdown Menu */
+        .nav-item {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            min-width: 280px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            z-index: 200;
+        }
+
+        .nav-item:hover .dropdown-menu,
+        .nav-item:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--cream);
+            color: var(--coral);
+        }
+
+        .dropdown-toggle::after {
+            content: ' ▼';
+            font-size: 0.7rem;
+            margin-left: 0.3rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(100px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 155, 155, 0.4);
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 155, 155, 0.6);
+        }
+
+        /* Hero Section */
+        .about-hero {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(120deg, var(--primary), var(--coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.3rem;
+            color: var(--coral);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        /* Quick Facts */
+        .quick-facts {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fact-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .fact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .fact-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .fact-item p {
+            color: var(--text-body);
+        }
+
+        /* My Story */
+        .my-story {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .my-story h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .story-content {
+            background: linear-gradient(135deg, rgba(255, 215, 125, 0.1), rgba(168, 230, 207, 0.1));
+            padding: 3rem;
+            border-radius: 20px;
+            border-left: 4px solid var(--coral);
+        }
+
+        .story-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .skills-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .skills-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .skill-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--coral);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        .skill-level {
+            width: 60px;
+            height: 4px;
+            background: var(--border);
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-level::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 90%;
+            background: linear-gradient(90deg, var(--coral), var(--peach));
+        }
+
+        /* Education & Awards */
+        .education-awards {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .section-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .section-card h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .edu-item, .award-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .edu-item:last-child, .award-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .edu-item h3, .award-item h3 {
+            font-size: 1.3rem;
+            color: var(--coral);
+            margin-bottom: 0.5rem;
+        }
+
+        .edu-item p, .award-item p {
+            color: var(--text-body);
+        }
+
+        .award-item .award-year {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        /* Personal Photos */
+        .personal-photos {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .personal-photos h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .photo-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            max-width: 900px;
+            margin: 5rem auto;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-btn-primary {
+            background: white;
+            color: var(--coral);
+        }
+
+        .cta-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .cta-btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-btn-secondary:hover {
+            background: white;
+            color: var(--coral);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.9);
+            padding: 3rem 2rem 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: var(--coral);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+        }
+
+        .faq-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .faq-intro {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-body);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+            transition: all 0.3s;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            color: var(--coral);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--coral);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 2rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            padding: 0 2rem 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--primary);
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .resume-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .about-hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .education-awards {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="rochell-hatfield-portfolio.html" class="logo">
+                <img src="/img/creative-design-studio-design-banner.png" alt="Rochell Hatfield Creative Studio">
+            </a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="rochell-hatfield-portfolio.html#work" class="dropdown-toggle">Work</a>
+                    <div class="dropdown-menu">
+                        <a href="case-study-iowa-city-coffee.html">Loyalty Program Redesign</a>
+                        <a href="case-study-bird-house.html">The Bird House Rebrand</a>
+                        <a href="case-study-humane-society.html">Humane Society Website</a>
+                        <a href="case-study-social-media.html">Social Media Strategy</a>
+                    </div>
+                </li>
+                <li><a href="rochell-hatfield-portfolio.html#services">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rochell-hatfield-portfolio.html#contact">Contact</a></li>
+                <li><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" class="resume-btn" download>Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="hero-text">
+                <h1>Hey, I'm Rochell!</h1>
+                <p class="subtitle">Creative Digital Marketing Designer & Brand Strategist</p>
+                <p>I'm a designer who believes great work happens at the intersection of strategy and creativity. With 5+ years bringing brands to life through thoughtful design, I help businesses tell their stories in ways that actually resonate with people.</p>
+                <p>Based in Coralville, Iowa—I work with local businesses and remote clients who value design that drives real results, not just pretty pixels.</p>
+            </div>
+            <div class="hero-image">
+                <img src="/img/avatar.png" alt="Rochell Hatfield - Digital Marketing Designer">
+            </div>
+        </section>
+
+        <!-- Quick Facts -->
+        <section class="quick-facts">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Quick Facts About Me</h2>
+            <div class="facts-grid">
+                <div class="fact-item">
+                    <div class="fact-icon">📍</div>
+                    <h3>Based In</h3>
+                    <p>Coralville, Iowa<br>Available for onsite work in Iowa City, Quad Cities, Muscatine</p>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-icon">🎓</div>
+                    <h3>Education</h3>
+                    <p>Bachelor of Design + UX/UI Certificate<br>Eastern Washington University</p>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-icon">💼</div>
+                    <h3>Experience</h3>
+                    <p>5+ Years<br>Digital Marketing & Design</p>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-icon">🎨</div>
+                    <h3>Specialties</h3>
+                    <p>Brand Identity, Web Design<br>Multi-Channel Campaigns</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Story -->
+        <section class="my-story">
+            <h2>My Story</h2>
+            <div class="story-content">
+                <p>I discovered my love for design while studying at Eastern Washington University, where I earned my Bachelor of Design in Visual Communications along with a UX/UI certificate in 2020. What started as a fascination with how things look quickly evolved into an obsession with how things work—and more importantly, how design can solve real problems for real people.</p>
+
+                <p>After graduation, I worked in fast-paced agency environments and hands-on roles that taught me the value of strategic thinking. From leading digital marketing for a six-location coffee company to directing complete rebrands for nonprofits, I've learned that the best design isn't just beautiful—it's purposeful, accessible, and rooted in understanding the people who'll use it.</p>
+
+                <p>These days, I bring that same human-centered approach to every project. Whether I'm designing a loyalty program interface that actually makes sense, creating a brand identity that tells a compelling story, or building a website that works for everyone (yes, including people using screen readers), my goal is always the same: make things that work beautifully and look good doing it.</p>
+
+                <p>When I'm not designing, you'll find me exploring Iowa's trails, experimenting with new coffee brewing methods (former Digital Marketing Director at Java House, so it's basically required), or staying way too current on design trends and accessibility best practices.</p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills-section">
+            <h2>What I Do Best</h2>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3>🎨 Design & Creative</h3>
+                    <ul class="skill-list">
+                        <li><span>Brand Identity Design</span><div class="skill-level"></div></li>
+                        <li><span>UI/UX Design</span><div class="skill-level"></div></li>
+                        <li><span>Web Design</span><div class="skill-level"></div></li>
+                        <li><span>Print & Collateral</span><div class="skill-level"></div></li>
+                        <li><span>Photography Direction</span><div class="skill-level"></div></li>
+                        <li><span>Video Production</span><div class="skill-level"></div></li>
+                        <li><span>Typography</span><div class="skill-level"></div></li>
+                        <li><span>Color Theory</span><div class="skill-level"></div></li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💻 Development & Technical</h3>
+                    <ul class="skill-list">
+                        <li><span>HTML/CSS/JavaScript</span><div class="skill-level"></div></li>
+                        <li><span>WordPress Development</span><div class="skill-level"></div></li>
+                        <li><span>SASS/SCSS</span><div class="skill-level"></div></li>
+                        <li><span>Responsive Design</span><div class="skill-level"></div></li>
+                        <li><span>WCAG 2.1 AA Compliance</span><div class="skill-level"></div></li>
+                        <li><span>Git Version Control</span><div class="skill-level"></div></li>
+                        <li><span>SEO Best Practices</span><div class="skill-level"></div></li>
+                        <li><span>Performance Optimization</span><div class="skill-level"></div></li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>📱 Digital Marketing</h3>
+                    <ul class="skill-list">
+                        <li><span>Social Media Strategy</span><div class="skill-level"></div></li>
+                        <li><span>Content Creation</span><div class="skill-level"></div></li>
+                        <li><span>Email Marketing</span><div class="skill-level"></div></li>
+                        <li><span>Google Ads</span><div class="skill-level"></div></li>
+                        <li><span>Meta Advertising</span><div class="skill-level"></div></li>
+                        <li><span>Analytics & Reporting</span><div class="skill-level"></div></li>
+                        <li><span>Copywriting</span><div class="skill-level"></div></li>
+                        <li><span>Campaign Strategy</span><div class="skill-level"></div></li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🛠️ Tools & Software</h3>
+                    <ul class="skill-list">
+                        <li><span>Adobe Photoshop</span><div class="skill-level"></div></li>
+                        <li><span>Adobe Illustrator</span><div class="skill-level"></div></li>
+                        <li><span>Adobe InDesign</span><div class="skill-level"></div></li>
+                        <li><span>Adobe Premiere Pro</span><div class="skill-level"></div></li>
+                        <li><span>Figma</span><div class="skill-level"></div></li>
+                        <li><span>Canva</span><div class="skill-level"></div></li>
+                        <li><span>Google Analytics</span><div class="skill-level"></div></li>
+                        <li><span>Asana</span><div class="skill-level"></div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Awards -->
+        <section class="education-awards">
+            <div class="section-card">
+                <h2>Education</h2>
+                <div class="edu-item">
+                    <h3>Bachelor of Design</h3>
+                    <p><strong>Eastern Washington University</strong><br>
+                    Visual Communications<br>
+                    2017 - 2020</p>
+                </div>
+                <div class="edu-item">
+                    <h3>UX/UI Design Certificate</h3>
+                    <p><strong>Eastern Washington University</strong><br>
+                    User Experience & User Interface Design<br>
+                    2019 - 2020</p>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2>Awards & Recognition</h2>
+                <div class="award-item">
+                    <h3>Top Ten Businesses Award</h3>
+                    <p class="award-year">2020</p>
+                    <p>Recognized by EWU Center for Entrepreneurship for campaign design and business strategy for Lysin Student Biotech Start-Up</p>
+                </div>
+                <div class="award-item">
+                    <h3>Investor Award - $12,500</h3>
+                    <p class="award-year">2020</p>
+                    <p>Secured investor funding for startup through compelling campaign design, pitch materials, and marketing strategy</p>
+                </div>
+                <div class="award-item">
+                    <h3>Top Sales Award</h3>
+                    <p class="award-year">2014</p>
+                    <p>Awarded Top Sales for King County Region</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Photos Section -->
+        <section class="personal-photos">
+            <h2>Beyond The Desk</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem; color: var(--text-body);">When I'm not designing, I'm usually outdoors exploring trails, trying new coffee shops (occupational hazard!), or finding inspiration in unexpected places.</p>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="/img/paragliding_rochell_hatfield.jpg" alt="Rochell at her creative workspace">
+                </div>
+                <div class="photo-item">
+                    <img src="/img/hiking_rochell_hatfield.jpg" alt="Rochell Hatfield professional photo">
+                </div>
+                <div class="photo-item">
+                    <img src="/img/mountaineering_rochell_hatfield.jpg" alt="Behind the scenes at a design project">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <p class="faq-intro">Here are answers to common questions about my work, process, and availability.</p>
+            
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What roles are you open to and what's your availability?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I'm open to full-time, contract, and freelance roles as a digital marketer, web designer, web developer, and graphic designer. I'm comfortable in agency environments, in-house marketing teams, or as a dedicated "single owner" for web + design + SEO execution.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What channels and deliverables have you shipped end-to-end?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I've shipped end-to-end deliverables across custom website development, responsive web design, landing page design, SEO optimization (technical and on-page), social media design, and print design. I'm comfortable owning the workflow from planning and production through QA and launch, including performance and tracking considerations so the work is measurable. For marketing teams, I can support the full cycle: creative production, web updates, SEO-friendly site changes, and ongoing iteration based on user behavior and results.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What do you specialize in most?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>My core specialization is web development and web design with SEO optimization built into the build process, supported by brand-consistent social media design and print design. I focus on creating and maintaining websites that are fast, mobile-first, accessible, and structured for discoverability—so design decisions and development choices support search performance and conversion goals. That means you're getting someone who can execute across disciplines without breaking brand consistency, site quality, or SEO fundamentals.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What types of clients do you work with (enterprise to LLCs)?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I've worked across a range of environments from larger organizations to individual LLCs, which makes me comfortable adapting to different levels of process, stakeholder complexity, and speed. In larger teams, I'm used to aligning with brand standards, documenting decisions, and collaborating across marketing, design, and development stakeholders. In smaller teams, I can move quickly and take ownership of web development, web design, SEO optimization, and ongoing content/design production without heavy overhead.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What does your process look like from kickoff to launch?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>My process starts with aligning on business goals and success criteria, then doing client and industry research plus user research when available to understand audience needs and friction points. Next, I define information architecture and build page templates via wireframes to validate hierarchy, messaging, and user flow before moving into visual design. From there, I develop and test the site with an emphasis on SEO-friendly structure, performance, responsive behavior, and accessibility, then set up site analytics and perform usability/QA testing before launch. After launch, I support iteration through ongoing web development, SEO improvements, and content/design updates driven by real user behavior.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Let's Create Something Great Together</h2>
+            <p>Whether you need a complete brand identity, a high-converting website, or a strategic marketing campaign—I'd love to hear about your project.</p>
+            <div class="cta-buttons">
+                <a href="rochell-hatfield-portfolio.html#contact" class="cta-btn cta-btn-primary">Start a Conversation</a>
+                <a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" class="cta-btn cta-btn-secondary" download>Download My Resume</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rochell Hatfield</h3>
+                <p>Creative digital marketing designer specializing in brand identity, web design, and strategic campaigns.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/rochell-hatfield/" target="_blank" aria-label="LinkedIn">in</a>
+                    <a href="https://www.instagram.com/rh.creative_studio.design/?hl=en" target="_blank" aria-label="Instagram">📷</a>
+                    <a href="https://www.facebook.com/rochell.yazzie.3" target="_blank" aria-label="Facebook">f</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="rochell-hatfield-portfolio.html">Home</a></li>
+                    <li><a href="rochell-hatfield-portfolio.html#work">Portfolio</a></li>
+                    <li><a href="rochell-hatfield-portfolio.html#services">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="rochell-hatfield-portfolio.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Case Studies</h3>
+                <ul class="footer-links">
+                    <li><a href="case-study-iowa-city-coffee.html">Loyalty Program Redesign</a></li>
+                    <li><a href="case-study-bird-house.html">The Bird House Rebrand</a></li>
+                    <li><a href="case-study-humane-society.html">Humane Society Website</a></li>
+                    <li><a href="case-study-social-media.html">Social Media Strategy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get In Touch</h3>
+                <ul class="footer-links">
+                    <li><a href="/cdn-cgi/l/email-protection#24564b474c4148484c4550424d414840644349454d480a474b49"><span class="__cf_email__" data-cfemail="aad8c5c9c2cfc6c6c2cbdeccc3cfc6ceeacdc7cbc3c684c9c5c7">[email&#160;protected]</span></a></li>
+                    <li><a href="tel:319-333-9684">319-333-9684</a></li>
+                    <li>Coralville, IA</li>
+                    <li><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" download>Download Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+                      <p>&copy; 2026 Rochell Hatfield. All rights reserved. | Designed & developed by Rochell Hatfield</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+
+    <script>
+        // Back to top button functionality
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > window.innerHeight * 0.9) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // FAQ accordion functionality
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const wasActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!wasActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

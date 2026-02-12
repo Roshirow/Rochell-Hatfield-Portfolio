@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iowa City Coffee Company social media strategy case study: Multi-platform content creation, community engagement, and brand storytelling across Instagram, Facebook, TikTok, and Pinterest by Rochell Hatfield.">
+    <meta name="keywords" content="social media marketing, content creation, Instagram strategy, community management, coffee shop marketing, Rochell Hatfield">
+    <meta name="author" content="Rochell Hatfield">
+    
+    <title>Social Media Strategy Case Study: Iowa City Coffee Company | Rochell Hatfield</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data - Case Study -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Iowa City Coffee Company Social Media Strategy",
+      "author": {
+        "@type": "Person",
+        "name": "Rochell Hatfield"
+      },
+      "description": "Multi-platform social media content strategy and community management for local coffee shop chain",
+      "keywords": "social media marketing, content creation, Instagram, community engagement",
+      "datePublished": "2023-02-01"
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #6B4E3D;
+            --coral: #FF9B9B;
+            --peach: #FFB88C;
+            --yellow: #FFD97D;
+            --mint: #A8E6CF;
+            --cyan: #89CFF0;
+            --lavender: #C9B4E5;
+            --cream: #FFF5E8;
+            --bg-light: #FFFBF5;
+            --text-body: #8B6F5C;
+            --border: #FFE8DB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-light);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1.2rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--coral);
+            outline: none;
+        }
+
+        .nav-links a:focus {
+            outline: 3px solid var(--coral);
+            outline-offset: 2px;
+        }
+
+        .resume-btn {
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 155, 155, 0.3);
+        }
+
+        /* Dropdown Menu */
+        .nav-item {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            min-width: 280px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            z-index: 200;
+        }
+
+        .nav-item:hover .dropdown-menu,
+        .nav-item:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--cream);
+            color: var(--coral);
+        }
+
+        .dropdown-toggle::after {
+            content: ' ▼';
+            font-size: 0.7rem;
+            margin-left: 0.3rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(100px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 155, 155, 0.4);
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 155, 155, 0.6);
+        }
+
+        body {
+            padding-top: 80px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--coral);
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .meta-item strong {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .meta-item span {
+            color: var(--primary);
+        }
+
+        .results-highlight {
+            background: linear-gradient(135deg, rgba(255, 215, 125, 0.2), rgba(168, 230, 207, 0.2));
+            border-left: 4px solid var(--coral);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .platform-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .platform-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .tag-list {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .tag {
+            background: var(--cream);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .image-grid img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-section {
+            background: white;
+            border: 2px solid var(--coral);
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 155, 155, 0.4);
+        }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="rochell-hatfield-portfolio.html" class="logo">
+                <img src="/img/creative-design-studio-design-banner.png" alt="Rochell Hatfield Creative Studio">
+            </a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="rochell-hatfield-portfolio.html#work" class="dropdown-toggle">Work</a>
+                    <div class="dropdown-menu">
+                        <a href="case-study-iowa-city-coffee.html">Loyalty Program Redesign</a>
+                        <a href="case-study-bird-house.html">The Bird House Rebrand</a>
+                        <a href="case-study-humane-society.html">Humane Society Website</a>
+                        <a href="case-study-social-media.html">Social Media Strategy</a>
+                    </div>
+                </li>
+                <li><a href="rochell-hatfield-portfolio.html#services">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rochell-hatfield-portfolio.html#contact">Contact</a></li>
+                <li><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" class="resume-btn" download>Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / <a href="index.html#work">Work</a> / Iowa City Coffee Social Media
+        </div>
+
+        <h1>Social Media Strategy & Content Creation</h1>
+
+        <div class="meta">
+            <div class="meta-item">
+                <strong>Client</strong>
+                <span>Iowa City Coffee Company (Java House & Heirloom Salad Co.)</span>
+            </div>
+            <div class="meta-item">
+                <strong>Timeline</strong>
+                <span>12 months (2023-2024)</span>
+            </div>
+            <div class="meta-item">
+                <strong>Role</strong>
+                <span>Social Media Manager & Content Creator</span>
+            </div>
+        </div>
+
+        <div class="results-highlight">
+            <h3 style="margin-top: 0;">Multi-Platform Social Media Presence</h3>
+            <p>Managed content strategy, creation, and community engagement across six social platforms to connect with customers and build brand loyalty for a local coffee shop chain with four locations.</p>
+        </div>
+
+        <h2>The Challenge</h2>
+        <p>Iowa City Coffee Company needed to strengthen their digital presence and connect with both loyal customers and new audiences, particularly younger generations who discover businesses through social media. With four physical locations and multiple sub-brands (Java House Coffee Roasters and Heirloom Salad Company), the challenge was maintaining brand consistency while creating platform-specific content that resonated with different audience segments.</p>
+
+        <h3>Key Objectives:</h3>
+        <ul>
+            <li>Build authentic community engagement beyond promotional content</li>
+            <li>Reach younger demographics (18-35) where they spend time online</li>
+            <li>Drive foot traffic to all four locations</li>
+            <li>Support the loyalty rewards program launch and ongoing promotions</li>
+            <li>Showcase brand personality and local community involvement</li>
+            <li>Create consistent posting schedule across multiple platforms</li>
+        </ul>
+
+        <h2>Multi-Platform Strategy</h2>
+        <p>I developed a comprehensive social media strategy leveraging three platforms, each with tailored content approaches:</p>
+
+        <div class="platform-grid">
+            <div class="platform-item">
+                <div class="platform-name">Instagram</div>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Primary platform for visual storytelling and community</p>
+            </div>
+            <div class="platform-item">
+                <div class="platform-name">Facebook</div>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Event promotion and local community engagement</p>
+            </div>
+            <div class="platform-item">
+                <div class="platform-name">TikTok</div>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Behind-the-scenes content for Gen Z</p>
+            </div>
+        </div>
+
+        <h2>Content Strategy</h2>
+        
+        <h3>Content Pillars</h3>
+        <p>I organized content around strategic pillars that balanced promotional and community-building content:</p>
+        <ul>
+            <li><strong>Brand Heritage & Storytelling:</strong> Anniversary celebrations, founder stories, 29-year history</li>
+            <li><strong>Product Highlights:</strong> Seasonal drinks, menu items, coffee roasting process</li>
+            <li><strong>Community Connection:</strong> Local events, customer features, employee spotlights</li>
+            <li><strong>Behind-the-Scenes:</strong> Coffee roasting, food prep, daily operations</li>
+            <li><strong>Promotional:</strong> New products, loyalty rewards, special offers, location updates</li>
+            <li><strong>Educational:</strong> Coffee brewing tips, recipe ideas, sustainability practices</li>
+        </ul>
+
+        <h3>Content Examples</h3>
+        <p>High-performing posts that drove engagement:</p>
+
+        <div class="image-grid">
+            <div>
+                <img src="/img/social-media-image1.png" alt="Java House 29th anniversary Instagram post featuring vintage photo and brand history">
+                <p style="font-size: 0.9rem; color: var(--text-body); margin-top: 0.5rem; text-align: center;">Brand heritage post celebrating 29-year anniversary (121 likes)</p>
+            </div>
+            <div>
+                <img src="/img/social-media-image3.png" alt="Product photography featuring Java House branded glass cup with iced coffee">
+                <p style="font-size: 0.9rem; color: var(--text-body); margin-top: 0.5rem; text-align: center;">New product announcement with location expansion details (83 likes)</p>
+            </div>
+            <div>
+                <img src="/img/social-media-image5.png" alt="Celebrating Paul for working at Java House for twenty years">
+                <p style="font-size: 0.9rem; color: var(--text-body); margin-top: 0.5rem; text-align: center;">Celebrating Paul for working at Java House for 20 years (147 likes)</p>
+            </div>
+        </div>
+
+        <h2>Content Creation Process</h2>
+        
+        <h3>Photography Direction</h3>
+        <p>I directed and created visual content that showcased products and atmosphere:</p>
+        <ul>
+            <li>On-location photography at all four coffee shop locations</li>
+            <li>Product styling for drinks, food, and retail items</li>
+            <li>Lifestyle shots featuring customers and community</li>
+            <li>Brand-consistent editing style and filters</li>
+            <li>Mobile-optimized vertical formats for Stories and Reels</li>
+        </ul>
+
+        <h3>Copywriting & Voice</h3>
+        <p>Developed a warm, authentic brand voice that reflected the local, community-focused nature of the business:</p>
+        <ul>
+            <li>Conversational, friendly tone appropriate for each platform</li>
+            <li>Emoji usage to add personality and increase engagement</li>
+            <li>Hashtag strategy combining branded, local, and trending tags</li>
+            <li>Calls-to-action that encouraged visits and loyalty sign-ups</li>
+            <li>Community-focused language ("our customers," "your Java House")</li>
+        </ul>
+
+        <h3>Content Calendar Management</h3>
+        <ul>
+            <li>Monthly content planning aligned with promotions and seasons</li>
+            <li>Consistent posting schedule across all platforms</li>
+            <li>Seasonal campaigns (fall drinks, holiday specials, summer refreshers)</li>
+            <li>Real-time content for trending moments and local events</li>
+            <li>Cross-platform content adaptation for platform-specific best practices</li>
+        </ul>
+
+        <h2>Community Management</h2>
+        <p>Beyond content creation, I actively managed community engagement:</p>
+        <ul>
+            <li>Responded to comments and direct messages across all platforms</li>
+            <li>Engaged with customer-generated content and user tags</li>
+            <li>Monitored brand mentions and local coffee community conversations</li>
+            <li>Built relationships with local influencers and micro-influencers</li>
+            <li>Addressed customer service inquiries and directed to appropriate channels</li>
+        </ul>
+
+        <h2>Integration with Loyalty Program</h2>
+        <p>Social media played a crucial role in the loyalty rewards program launch and ongoing engagement:</p>
+        <ul>
+            <li>Created announcement campaign for program revamp</li>
+            <li>Designed graphics explaining how to earn and redeem points</li>
+            <li>Featured loyalty member benefits and success stories</li>
+            <li>Promoted birthday rewards and special perks</li>
+            <li>Shared data showing the 26% increase in loyalty participation</li>
+        </ul>
+
+        <h2>Platform-Specific Tactics</h2>
+        
+        <h3>Instagram Strategy</h3>
+        <ul>
+            <li>Feed posts showcasing products and brand aesthetic</li>
+            <li>Stories for daily engagement and behind-the-scenes content</li>
+            <li>Reels featuring coffee-making process and product reveals</li>
+            <li>Highlights organized by content pillars (Menu, Locations, Events, etc.)</li>
+            <li>Shopping tags for retail products</li>
+        </ul>
+
+        <h3>TikTok Approach</h3>
+        <ul>
+            <li>Short-form video content showing coffee preparation</li>
+            <li>Trending audio and challenge participation</li>
+            <li>Employee features and day-in-the-life content</li>
+            <li>Quick tips and coffee hacks</li>
+        </ul>
+
+        <h3>Facebook Focus</h3>
+        <ul>
+            <li>Event promotion for in-store happenings</li>
+            <li>Longer-form storytelling and community updates</li>
+            <li>Customer testimonials and reviews</li>
+            <li>Local business partnerships and collaborations</li>
+        </ul>
+
+        <h2>Key Deliverables</h2>
+        <div class="tag-list">
+            <span class="tag">Content Strategy</span>
+            <span class="tag">Photography Direction</span>
+            <span class="tag">Copywriting</span>
+            <span class="tag">Community Management</span>
+            <span class="tag">Content Calendar</span>
+            <span class="tag">Multi-Platform Management</span>
+            <span class="tag">Instagram Stories & Reels</span>
+            <span class="tag">TikTok Videos</span>
+            <span class="tag">Graphic Design</span>
+            <span class="tag">Analytics & Reporting</span>
+        </div>
+
+        <h2>Tools & Platforms</h2>
+        <ul>
+            <li>Instagram, Facebook, TikTok</li>
+            <li>Adobe Creative Suite (Photoshop, Lightroom for photo editing)</li>
+            <li>Content scheduling and analytics tools</li>
+            <li>Mobile photography and editing apps</li>
+        </ul>
+
+        <h2>Impact & Results</h2>
+        <p>The multi-platform social media strategy successfully:</p>
+        <ul>
+            <li><strong>Increased brand visibility</strong> across younger demographics</li>
+            <li><strong>Supported loyalty program growth</strong> with 26% increase in participation</li>
+            <li><strong>Built authentic community</strong> around the brand and local identity</li>
+            <li><strong>Drove foot traffic</strong> to all four locations through geo-targeted content</li>
+            <li><strong>Created consistent brand presence</strong> across digital touchpoints</li>
+            <li><strong>Generated user-generated content</strong> from engaged customers</li>
+        </ul>
+
+        <h2>Key Insights</h2>
+        <p>This project demonstrated that successful social media marketing requires more than just posting content—it demands strategic thinking, authentic community building, and platform-specific optimization. By balancing promotional content with genuine storytelling and community engagement, I helped Iowa City Coffee Company build meaningful digital relationships that translated to real-world customer loyalty.</p>
+    </main>
+
+    <!-- Let's Work Together CTA -->
+    <section style="max-width: 900px; margin: 5rem auto; padding: 3rem 2rem; background: linear-gradient(135deg, var(--coral), var(--peach)); border-radius: 20px; text-align: center; color: white;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Let's Create Something Great Together</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Whether you need social media strategy, content creation, community management, or multi-platform campaigns—I'd love to hear about your project.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="rochell-hatfield-portfolio.html#contact" style="padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; background: white; color: var(--coral); transition: all 0.3s;">Start a Conversation</a>
+            <a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" download style="padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; transition: all 0.3s;">Download My Resume</a>
+        </div>
+    </section>
+
+    <!-- More Case Studies -->
+    <section style="max-width: 1200px; margin: 5rem auto; padding: 0 2rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; font-family: 'Fraunces', serif; color: var(--primary);">More Case Studies</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            
+            <!-- Iowa City Coffee Case Study -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                <img src="/img/Perky Points Loyalty Rewards System.jpg" alt="Loyalty program interface design" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); font-family: 'Fraunces', serif;">Loyalty Program Redesign</h3>
+                    <p style="color: var(--primary); margin-bottom: 1rem;">Multi-channel marketing campaign and UX redesign achieving 26% increase in loyalty participation and $6.32 boost in average spend.</p>
+                    <a href="case-study-iowa-city-coffee.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">View Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Bird House Case Study -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                <img src="/img/bird-house-design-image1.jpg" alt="The Bird House website design" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); font-family: 'Fraunces', serif;">The Bird House Rebrand</h3>
+                    <p style="color: var(--primary); margin-bottom: 1rem;">Complete nonprofit rebrand including logo, brand guidelines, and WCAG 2.1 AA compliant website for Johnson County's hospice home.</p>
+                    <a href="case-study-bird-house.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">View Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Humane Society Case Study -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                <img src="/img/MockupDevices.jpg" alt="Humane Society website design" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); font-family: 'Fraunces', serif;">Humane Society Website</h3>
+                    <p style="color: var(--primary); margin-bottom: 1rem;">Research-driven UX design addressing adoption barriers through user personas, wireframing, and strategic information architecture.</p>
+                    <a href="case-study-humane-society.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">View Case Study →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+
+    <footer>
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; padding: 3rem 2rem 2rem; background: var(--primary); color: rgba(255,255,255,0.9);">
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Rochell Hatfield</h3>
+                <p style="line-height: 1.6;">Creative digital marketing designer specializing in brand identity, web design, and strategic campaigns.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <a href="https://www.linkedin.com/in/rochell-hatfield/" target="_blank" aria-label="LinkedIn" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">in</a>
+                    <a href="https://www.instagram.com/rh.creative_studio.design/?hl=en" target="_blank" aria-label="Instagram" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">📷</a>
+                    <a href="https://www.facebook.com/rochell.yazzie.3" target="_blank" aria-label="Facebook" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">f</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Quick Links</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html#work" style="color: rgba(255,255,255,0.7); text-decoration: none;">Portfolio</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html#services" style="color: rgba(255,255,255,0.7); text-decoration: none;">Services</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">About</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="rochell-hatfield-portfolio.html#contact" style="color: rgba(255,255,255,0.7); text-decoration: none;">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Case Studies</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-iowa-city-coffee.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Loyalty Program Redesign</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-bird-house.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">The Bird House Rebrand</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-humane-society.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Humane Society Website</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="case-study-social-media.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Social Media Strategy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Get In Touch</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;"><a href="mailto:rochellhatfield@gmail.com" style="color: rgba(255,255,255,0.7); text-decoration: none;">rochellhatfield@gmail.com</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="tel:319-333-9684" style="color: rgba(255,255,255,0.7); text-decoration: none;">319-333-9684</a></li>
+                    <li style="margin-bottom: 0.5rem; color: rgba(255,255,255,0.7);">Coralville, IA</li>
+                    <li style="margin-bottom: 0.5rem;"><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" download style="color: rgba(255,255,255,0.7); text-decoration: none;">Download Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); background: var(--primary); padding-bottom: 2rem;">
+            <p>&copy; 2026 Rochell Hatfield. All rights reserved. | Designed & developed by Rochell Hatfield</p>
+        </div>
+    </footer>
+
+    <script>
+        // Back to top button functionality
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > window.innerHeight * 0.9) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
