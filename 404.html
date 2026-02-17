@@ -613,6 +613,35 @@
                 font-size: 4rem;
             }
         }
+
+        /* MOBILE MENU FIX */
+
+        .mobile-menu-overlay {
+            pointer-events: none !important;
+            visibility: hidden !important;
+        }
+
+        .mobile-menu-overlay.active {
+            pointer-events: auto !important;
+            visibility: visible !important;
+        }
+
+        @media (min-width: 769px) {
+            .hamburger {
+                display: none !important;
+            }
+            .mobile-menu {
+                display: none !important;
+            }
+            .mobile-menu-overlay {
+                display: none !important;
+            }
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -638,7 +667,7 @@
                 </li>
                 <li><a href="/index.html#services">Services</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="/index.html#contact">Contact</a></li>
+                <li><a href="/contact.html">Contact</a></li>
                 <li><a href="/pdf/rochell hatfield resume 2026.pdf" class="resume-btn" download>Resume</a></li>
             </ul>
 
@@ -673,7 +702,7 @@
                 <a href="/about.html">About</a>
             </li>
             <li class="mobile-menu-item">
-                <a href="/index.html#contact">Contact</a>
+                <a href="/contact.html">Contact</a>
             </li>
         </ul>
         <a href="/pdf/rochell hatfield resume 2026.pdf" class="mobile-resume-btn" download>Download Resume</a>
@@ -698,7 +727,7 @@
                     <a href="/index.html#work" class="link-item">💼 Portfolio</a>
                     <a href="/index.html#services" class="link-item">⚡ Services</a>
                     <a href="/about.html" class="link-item">👋 About Me</a>
-                    <a href="/index.html#contact" class="link-item">📧 Contact</a>
+                    <a href="/contact.html" class="link-item">📧 Contact</a>
                     <a href="/case-study-iowa-city-coffee.html" class="link-item">📊 Case Studies</a>
                 </div>
             </div>
@@ -713,7 +742,6 @@
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/rochell-hatfield/" target="_blank" aria-label="LinkedIn">in</a>
                     <a href="https://www.instagram.com/rh.creative_studio.design/?hl=en" target="_blank" aria-label="Instagram">📷</a>
-                    <a href="https://www.facebook.com/rochell.yazzie.3" target="_blank" aria-label="Facebook">f</a>
                 </div>
             </div>
             <div class="footer-section">
@@ -723,7 +751,7 @@
                     <li><a href="/index.html#work">Portfolio</a></li>
                     <li><a href="/index.html#services">Services</a></li>
                     <li><a href="/about.html">About</a></li>
-                    <li><a href="/index.html#contact">Contact</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">

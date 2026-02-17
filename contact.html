@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Rochell Hatfield - Digital marketing designer specializing in brand identity, web design, and strategic campaigns. Get in touch for freelance or full-time opportunities.">
+    <meta name="robots" content="index, follow">
+    <title>Contact - Rochell Hatfield | Digital Marketing Designer</title>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon_io/site.webmanifest">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rochellhatfield.com/contact.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for form icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Structured Data - Contact Point -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Rochell Hatfield",
+        "jobTitle": "Digital Marketing Designer",
+        "email": "rochellhatfield@gmail.com",
+        "telephone": "+1-319-333-9684",
+        "url": "https://rochellhatfield.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Coralville",
+          "addressRegion": "IA",
+          "addressCountry": "US"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-319-333-9684",
+          "contactType": "Business Inquiries",
+          "email": "rochellhatfield@gmail.com",
+          "availableLanguage": "English"
+        }
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #6B4E3D;
+            --coral: #FF9B9B;
+            --peach: #FFB88C;
+            --yellow: #FFD97D;
+            --mint: #A8E6CF;
+            --cyan: #89CFF0;
+            --lavender: #C9B4E5;
+            --cream: #FFF5E8;
+            --bg-light: #FFFBF5;
+            --text-body: #8B6F5C;
+            --border: #FFE8DB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-light);
+            color: var(--primary);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Hide skip to main content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            z-index: 200;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1.2rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--coral);
+            outline: none;
+        }
+
+        .resume-btn {
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 155, 155, 0.3);
+        }
+
+        /* Dropdown Menu */
+        .nav-item {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            min-width: 280px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            z-index: 200;
+        }
+
+        .nav-item:hover .dropdown-menu,
+        .nav-item:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--cream);
+            color: var(--coral);
+        }
+
+        .dropdown-toggle::after {
+            content: ' ▼';
+            font-size: 0.7rem;
+            margin-left: 0.3rem;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 101;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(11px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-11px) rotate(-45deg);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 98;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            background: white;
+            z-index: 99;
+            padding: 5rem 2rem 2rem;
+            overflow-y: auto;
+            transition: right 0.3s ease;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu-links > li {
+            margin-bottom: 0.5rem;
+        }
+
+        .mobile-menu-links a {
+            display: block;
+            padding: 1rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .mobile-menu-links a:hover,
+        .mobile-menu-links a:focus {
+            background: var(--cream);
+            color: var(--coral);
+        }
+
+        .mobile-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding-left: 1rem;
+        }
+
+        .mobile-dropdown.active {
+            max-height: 500px;
+        }
+
+        .mobile-dropdown a {
+            font-size: 1rem;
+            padding: 0.8rem 1rem;
+            color: var(--text-body);
+        }
+
+        .mobile-resume-btn {
+            display: block;
+            margin-top: 2rem;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        /* Desktop - Ensure mobile menu is hidden */
+        @media (min-width: 769px) {
+            .hamburger {
+                display: none !important;
+            }
+
+            .mobile-menu {
+                display: none !important;
+            }
+
+            .mobile-menu-overlay {
+                display: none !important;
+            }
+        }
+
+        /* Contact Page Styles */
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-hero {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-hero p {
+            font-size: 1.2rem;
+            color: var(--text-body);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Contact Form Container */
+        .container-contact100 {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .wrap-contact100 {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 5px 30px rgba(107, 78, 61, 0.1);
+            border: 1px solid var(--border);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Form */
+        .contact100-form {
+            width: 100%;
+        }
+
+        .contact100-form-title {
+            display: block;
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            color: var(--coral);
+            line-height: 1.2;
+            text-align: center;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .contact100-form-subtitle {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            color: var(--text-body);
+            line-height: 1.2;
+            text-align: center;
+            padding-bottom: 2.5rem;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        /* Input */
+        .wrap-input100 {
+            width: 100%;
+            position: relative;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .wrap-input100:hover {
+            border-bottom-color: var(--coral);
+        }
+
+        .wrap-input100 p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .input100 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: var(--primary);
+            line-height: 1.4;
+            display: block;
+            width: 100%;
+            height: 45px;
+            background: transparent;
+            padding: 0 5px 0 38px;
+            border: none;
+            outline: none;
+        }
+
+        .input100::placeholder {
+            color: #cccccc;
+        }
+
+        textarea.input100 {
+            min-height: 120px;
+            padding-top: 9px;
+            padding-bottom: 13px;
+        }
+
+        .input100:focus {
+            outline: none;
+        }
+
+        /* Focus Animation */
+        .focus-input100 {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .focus-input100::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            transition: all 0.4s;
+            background: linear-gradient(to right, var(--coral), var(--peach));
+        }
+
+        .input100:focus + .focus-input100::before {
+            width: 100%;
+        }
+
+        .has-val.input100 + .focus-input100::before {
+            width: 100%;
+        }
+
+        /* Icon */
+        .symbol-input100 {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            border-radius: 25px;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-left: 5px;
+            pointer-events: none;
+            color: #999999;
+            transition: all 0.4s;
+        }
+
+        .input100:focus + .focus-input100 + .symbol-input100 {
+            color: var(--coral);
+            padding-left: 0px;
+        }
+
+        .has-val.input100 + .focus-input100 + .symbol-input100 {
+            color: var(--coral);
+            padding-left: 0px;
+        }
+
+        /* Validation */
+        .validate-input {
+            position: relative;
+        }
+
+        .alert-validate::before {
+            content: attr(data-validate);
+            position: absolute;
+            max-width: 70%;
+            background-color: #fff;
+            border: 1px solid var(--coral);
+            border-radius: 2px;
+            padding: 4px 25px 4px 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 2px;
+            pointer-events: none;
+            font-family: 'Inter', sans-serif;
+            color: var(--coral);
+            font-size: 13px;
+            line-height: 1.4;
+            text-align: left;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .alert-validate::after {
+            content: "\f06a";
+            font-family: FontAwesome;
+            display: block;
+            position: absolute;
+            color: var(--coral);
+            font-size: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 8px;
+        }
+
+        .alert-validate:hover:before {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (max-width: 992px) {
+            .alert-validate::before {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        /* Button */
+        .container-contact100-form-btn {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 1rem;
+        }
+
+        /* Honeypot - Hidden field for bots */
+        .honeypot {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Math verification styling */
+        .math-verification {
+            width: 100%;
+            margin-bottom: 2.5rem;
+        }
+
+        .math-question {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--cream);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .math-question label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin: 0;
+            flex: 1;
+        }
+
+        .math-answer {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 6px;
+            width: 80px;
+            text-align: center;
+            outline: none;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .math-answer:focus {
+            border-color: var(--coral);
+            box-shadow: 0 0 0 3px rgba(255, 155, 155, 0.1);
+        }
+
+        .math-answer.correct {
+            border-color: var(--mint);
+            background: rgba(168, 230, 207, 0.1);
+        }
+
+        .math-answer.incorrect {
+            border-color: var(--coral);
+            background: rgba(255, 155, 155, 0.1);
+        }
+
+        .contact100-form-btn {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            min-width: 160px;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            background: linear-gradient(135deg, var(--coral), var(--peach));
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 3px 15px rgba(255, 155, 155, 0.3);
+        }
+
+        .contact100-form-btn input[type="submit"] {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            color: #fff;
+            background: transparent;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .contact100-form-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 155, 155, 0.4);
+        }
+
+        /* Contact Methods */
+        .contact-methods {
+            max-width: 600px;
+            margin: 4rem auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .contact-methods h3 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .contact-method:hover {
+            border-color: var(--coral);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 155, 155, 0.15);
+        }
+
+        .contact-method img {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 1rem;
+        }
+
+        .contact-method a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-method a:hover {
+            color: var(--coral);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.9);
+            padding: 3rem 2rem 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: var(--coral);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-bottom ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-overlay,
+            .mobile-menu {
+                display: block;
+            }
+
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+
+            .contact-hero p {
+                font-size: 1rem;
+            }
+
+            .wrap-contact100 {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+
+            .contact-hero {
+                padding: 0 1.5rem;
+            }
+
+            .footer-bottom ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/index.html" class="logo">
+                <img src="/img/creative-design-studio-design-banner.png" alt="Rochell Hatfield Creative Studio">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="/index.html#work" class="dropdown-toggle">Work</a>
+                    <div class="dropdown-menu">
+                        <a href="/case-study-iowa-city-coffee.html">Loyalty Program Redesign</a>
+                        <a href="/case-study-bird-house.html">The Bird House Rebrand</a>
+                        <a href="/case-study-humane-society.html">Humane Society Website</a>
+                        <a href="/case-study-social-media.html">Social Media Strategy</a>
+                    </div>
+                </li>
+                <li><a href="/index.html#services">Services</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/pdf/rochell hatfield resume 2026.pdf" class="resume-btn" download>Resume</a></li>
+            </ul>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" aria-label="Mobile navigation">
+        <ul class="mobile-menu-links">
+            <li class="mobile-menu-item has-dropdown">
+                <a href="/index.html#work">Work</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="/case-study-iowa-city-coffee.html">Loyalty Program Redesign</a></li>
+                    <li><a href="/case-study-bird-house.html">The Bird House Rebrand</a></li>
+                    <li><a href="/case-study-humane-society.html">Humane Society Website</a></li>
+                    <li><a href="/case-study-social-media.html">Social Media Strategy</a></li>
+                </ul>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="/index.html#services">Services</a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="/about.html">About</a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="/contact.html">Contact</a>
+            </li>
+        </ul>
+        <a href="/pdf/rochell hatfield resume 2026.pdf" class="mobile-resume-btn" download>Download Resume</a>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <div class="contact-hero">
+            <h1>Let's Work Together</h1>
+            <p>Available for freelance projects and full-time opportunities. I'd love to hear about your project or position.</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="container-contact100">
+            <div class="wrap-contact100">
+                <form class="contact100-form validate-form" action="https://formspree.io/f/moqrglgq" method="POST">
+                    
+                    <span class="contact100-form-title">
+                        I would love to hear from you!
+                    </span>
+                    <p class="contact100-form-subtitle">Leave me a little message</p>
+                    
+                    <div class="wrap-input100 validate-input" data-validate="Name is required">
+                        <p>Name:</p>
+                        <input class="input100" type="text" name="name" placeholder="Name" required>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: example@abc.com">
+                        <p>Email:</p>
+                        <input class="input100" type="email" name="email" placeholder="Email" required>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Message is required">
+                        <p>Message:</p>
+                        <textarea class="input100" name="message" placeholder="Message" required></textarea>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <!-- Honeypot field - Hidden from humans, visible to bots -->
+                    <div class="honeypot">
+                        <label for="website">Website (leave blank):</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <!-- Math verification - Simple for humans, hard for bots -->
+                    <div class="math-verification">
+                        <div class="math-question">
+                            <label for="mathAnswer" id="mathQuestion">Please verify you're human: What is <span id="num1">5</span> + <span id="num2">3</span>?</label>
+                            <input type="text" id="mathAnswer" class="math-answer" placeholder="?" autocomplete="off" required>
+                        </div>
+                    </div>
+
+                    <div class="container-contact100-form-btn">
+                        <button class="contact100-form-btn" type="submit">
+                            <input type="submit" value="Send Message">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Contact Methods -->
+        <div class="contact-methods">
+            <h3>Other Ways to Reach Me</h3>
+            <div class="contact-grid">
+                <div class="contact-method">
+                    <img src="/img/phone icon-07.png" alt="Phone icon">
+                    <p><a href="tel:319-333-9684">319-333-9684</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rochell Hatfield</h3>
+                <p>Creative digital marketing designer specializing in brand identity, web design, and strategic campaigns.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/rochell-hatfield/" target="_blank" aria-label="LinkedIn">in</a>
+                    <a href="https://www.instagram.com/rh.creative_studio.design/?hl=en" target="_blank" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html#work">Portfolio</a></li>
+                    <li><a href="/index.html#services">Services</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Case Studies</h3>
+                <ul class="footer-links">
+                    <li><a href="/case-study-iowa-city-coffee.html">Loyalty Program Redesign</a></li>
+                    <li><a href="/case-study-bird-house.html">The Bird House Rebrand</a></li>
+                    <li><a href="/case-study-humane-society.html">Humane Society Website</a></li>
+                    <li><a href="/case-study-social-media.html">Social Media Strategy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get In Touch</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:rochellhatfield@gmail.com">rochellhatfield@gmail.com</a></li>
+                    <li><a href="tel:319-333-9684">319-333-9684</a></li>
+                    <li>Coralville, IA</li>
+                    <li><a href="/pdf/rochell hatfield resume 2026.pdf" download>Download Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rochell Hatfield. All rights reserved. | Designed & developed by Rochell Hatfield</p>
+            <ul>
+                <li><a href="/privacypolicy.html">Privacy Policy</a></li>
+                <li><a href="/termsandagreements.html">Terms & Agreements</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- jQuery (required for form validation) -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- Form Validation & Anti-Spam Script -->
+    <script>
+        (function ($) {
+            "use strict";
+
+            // Anti-spam variables
+            let formLoadTime = Date.now();
+            let correctAnswer = 0;
+
+            // Generate random math question on page load
+            function generateMathQuestion() {
+                const num1 = Math.floor(Math.random() * 10) + 1;
+                const num2 = Math.floor(Math.random() * 10) + 1;
+                correctAnswer = num1 + num2;
+                
+                $('#num1').text(num1);
+                $('#num2').text(num2);
+            }
+
+            // Initialize math question
+            generateMathQuestion();
+
+            // Check math answer as user types
+            $('#mathAnswer').on('input', function() {
+                const answer = parseInt($(this).val());
+                $(this).removeClass('correct incorrect');
+                
+                if (answer === correctAnswer) {
+                    $(this).addClass('correct');
+                } else if ($(this).val() !== '') {
+                    $(this).addClass('incorrect');
+                }
+            });
+
+            // Form validation
+            var input = $('.validate-input .input100');
+
+            $('.validate-form').on('submit', function(e){
+                var check = true;
+
+                // 1. HONEYPOT CHECK - If filled, it's a bot
+                if ($('#website').val() !== '') {
+                    console.log('Spam detected: Honeypot filled');
+                    return false; // Silent fail for bots
+                }
+
+                // 2. TIME-BASED CHECK - Form must be on screen for at least 3 seconds
+                const timeOnPage = (Date.now() - formLoadTime) / 1000;
+                if (timeOnPage < 3) {
+                    alert('Please take a moment to fill out the form properly.');
+                    return false;
+                }
+
+                // 3. MATH VERIFICATION - Must answer correctly
+                const mathAnswer = parseInt($('#mathAnswer').val());
+                if (mathAnswer !== correctAnswer) {
+                    alert('Please answer the verification question correctly.');
+                    $('#mathAnswer').addClass('incorrect').focus();
+                    return false;
+                }
+
+                // 4. VALIDATE ALL INPUT FIELDS
+                for(var i=0; i<input.length; i++) {
+                    if(validate(input[i]) == false){
+                        showValidate(input[i]);
+                        check=false;
+                    }
+                }
+
+                // 5. ADDITIONAL SPAM PATTERNS CHECK
+                const message = $('textarea[name="message"]').val().toLowerCase();
+                const spamKeywords = ['viagra', 'cialis', 'casino', 'lottery', 'prize', 'click here', 'buy now'];
+                const hasSpam = spamKeywords.some(keyword => message.includes(keyword));
+                
+                if (hasSpam) {
+                    alert('Your message appears to contain spam. Please revise and try again.');
+                    return false;
+                }
+
+                return check;
+            });
+
+            $('.validate-form .input100').each(function(){
+                $(this).focus(function(){
+                   hideValidate(this);
+                });
+            });
+
+            function validate (input) {
+                if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
+                    if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                        return false;
+                    }
+                }
+                else {
+                    if($(input).val().trim() == ''){
+                        return false;
+                    }
+                }
+            }
+
+            function showValidate(input) {
+                var thisAlert = $(input).parent();
+                $(thisAlert).addClass('alert-validate');
+            }
+
+            function hideValidate(input) {
+                var thisAlert = $(input).parent();
+                $(thisAlert).removeClass('alert-validate');
+            }
+            
+            $('.input100').each(function(){
+                $(this).on('blur', function(){
+                    if($(this).val().trim() != "") {
+                        $(this).addClass('has-val');
+                    }
+                    else {
+                        $(this).removeClass('has-val');
+                    }
+                })    
+            })
+
+        })(jQuery);
+    </script>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+
+        function toggleMobileMenu() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+            
+            // Only lock body scroll when menu is active
+            if (isExpanded) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        hamburger.addEventListener('click', toggleMobileMenu);
+        mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+        // Mobile dropdown toggle
+        const dropdownToggles = document.querySelectorAll('.mobile-menu-item.has-dropdown > a');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const parent = this.parentElement;
+                const dropdown = parent.querySelector('.mobile-dropdown');
+                
+                parent.classList.toggle('active');
+                dropdown.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

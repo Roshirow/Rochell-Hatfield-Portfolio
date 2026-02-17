@@ -556,6 +556,35 @@
             text-align: center;
             margin-top: 4rem;
         }
+
+        /* MOBILE MENU FIX */
+
+        .mobile-menu-overlay {
+            pointer-events: none !important;
+            visibility: hidden !important;
+        }
+
+        .mobile-menu-overlay.active {
+            pointer-events: auto !important;
+            visibility: visible !important;
+        }
+
+        @media (min-width: 769px) {
+            .hamburger {
+                display: none !important;
+            }
+            .mobile-menu {
+                display: none !important;
+            }
+            .mobile-menu-overlay {
+                display: none !important;
+            }
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -581,7 +610,7 @@
                 </li>
                 <li><a href="/index.html#services">Services</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="/index.html#contact">Contact</a></li>
+                <li><a href="/contact.html">Contact</a></li>
                 <li><a href="/pdf/rochell hatfield resume 2026.pdf" class="resume-btn" download>Resume</a></li>
             </ul>
 
@@ -616,7 +645,7 @@
                 <a href="/about.html">About</a>
             </li>
             <li class="mobile-menu-item">
-                <a href="/index.html#contact">Contact</a>
+                <a href="/contact.html">Contact</a>
             </li>
         </ul>
         <a href="/pdf/rochell hatfield resume 2026.pdf" class="mobile-resume-btn" download>Download Resume</a>
@@ -842,8 +871,8 @@
         <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Let's Create Something Great Together</h2>
         <p style="font-size: 1.2rem; margin-bottom: 2rem;">Whether you need a loyalty program redesign, brand strategy, or multi-channel marketing campaign—I'd love to hear about your project.</p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="index.html#contact" style="padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; background: white; color: var(--coral); transition: all 0.3s;">Start a Conversation</a>
-            <a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" download style="padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; transition: all 0.3s;">Download My Resume</a>
+            <a href="/contact.html" style="padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; background: white; color: var(--coral); transition: all 0.3s;">Start a Conversation</a>
+            <a href="/pdf/Rochell Hatfield Resume 2026.pdf" download style="padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; transition: all 0.3s;">Download My Resume</a>
         </div>
     </section>
 
@@ -896,7 +925,6 @@
                 <div style="display: flex; gap: 1rem; margin-top: 1rem;">
                     <a href="https://www.linkedin.com/in/rochell-hatfield/" target="_blank" aria-label="LinkedIn" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">in</a>
                     <a href="https://www.instagram.com/rh.creative_studio.design/?hl=en" target="_blank" aria-label="Instagram" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">📷</a>
-                    <a href="https://www.facebook.com/rochell.yazzie.3" target="_blank" aria-label="Facebook" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.2rem;">f</a>
                 </div>
             </div>
             <div class="footer-section">
@@ -906,7 +934,7 @@
                     <li style="margin-bottom: 0.5rem;"><a href="index.html#work" style="color: rgba(255,255,255,0.7); text-decoration: none;">Portfolio</a></li>
                     <li style="margin-bottom: 0.5rem;"><a href="index.html#services" style="color: rgba(255,255,255,0.7); text-decoration: none;">Services</a></li>
                     <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">About</a></li>
-                    <li style="margin-bottom: 0.5rem;"><a href="index.html#contact" style="color: rgba(255,255,255,0.7); text-decoration: none;">Contact</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="/contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -924,7 +952,7 @@
                     <li style="margin-bottom: 0.5rem;"><a href="mailto:rochellhatfield@gmail.com" style="color: rgba(255,255,255,0.7); text-decoration: none;">rochellhatfield@gmail.com</a></li>
                     <li style="margin-bottom: 0.5rem;"><a href="tel:319-333-9684" style="color: rgba(255,255,255,0.7); text-decoration: none;">319-333-9684</a></li>
                     <li style="margin-bottom: 0.5rem; color: rgba(255,255,255,0.7);">Coralville, IA</li>
-                    <li style="margin-bottom: 0.5rem;"><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" download style="color: rgba(255,255,255,0.7); text-decoration: none;">Download Resume</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="/pdf/Rochell Hatfield Resume 2026.pdf" download style="color: rgba(255,255,255,0.7); text-decoration: none;">Download Resume</a></li>
                 </ul>
             </div>
         </div>

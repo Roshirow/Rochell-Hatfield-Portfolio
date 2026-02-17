@@ -16,6 +16,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://rochellhatfield.com/contact.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
   
   <!-- Case Studies -->
   <url>

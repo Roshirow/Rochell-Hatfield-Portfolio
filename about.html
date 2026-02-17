@@ -908,6 +908,35 @@
                 font-size: 0.8rem;
             }
         }
+
+        /* MOBILE MENU FIX */
+
+        .mobile-menu-overlay {
+            pointer-events: none !important;
+            visibility: hidden !important;
+        }
+
+        .mobile-menu-overlay.active {
+            pointer-events: auto !important;
+            visibility: visible !important;
+        }
+
+        @media (min-width: 769px) {
+            .hamburger {
+                display: none !important;
+            }
+            .mobile-menu {
+                display: none !important;
+            }
+            .mobile-menu-overlay {
+                display: none !important;
+            }
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -933,7 +962,7 @@
                 </li>
                 <li><a href="/index.html#services">Services</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="/index.html#contact">Contact</a></li>
+                <li><a href="/contact.html">Contact</a></li>
                 <li><a href="/pdf/rochell hatfield resume 2026.pdf" class="resume-btn" download>Resume</a></li>
             </ul>
 
@@ -968,7 +997,7 @@
                 <a href="/about.html">About</a>
             </li>
             <li class="mobile-menu-item">
-                <a href="/index.html#contact">Contact</a>
+                <a href="/contact.html">Contact</a>
             </li>
         </ul>
         <a href="/pdf/rochell hatfield resume 2026.pdf" class="mobile-resume-btn" download>Download Resume</a>
@@ -1214,8 +1243,8 @@
             <h2>Let's Create Something Great Together</h2>
             <p>Whether you need a complete brand identity, a high-converting website, or a strategic marketing campaign—I'd love to hear about your project.</p>
             <div class="cta-buttons">
-                <a href="index.html#contact" class="cta-btn cta-btn-primary">Start a Conversation</a>
-                <a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" class="cta-btn cta-btn-secondary" download>Download My Resume</a>
+                <a href="/contact.html" class="cta-btn cta-btn-primary">Start a Conversation</a>
+                <a href="/pdf/Rochell Hatfield Resume 2026.pdf" class="cta-btn cta-btn-secondary" download>Download My Resume</a>
             </div>
         </section>
     </main>
@@ -1228,7 +1257,6 @@
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/rochell-hatfield/" target="_blank" aria-label="LinkedIn">in</a>
                     <a href="https://www.instagram.com/rh.creative_studio.design/?hl=en" target="_blank" aria-label="Instagram">📷</a>
-                    <a href="https://www.facebook.com/rochell.yazzie.3" target="_blank" aria-label="Facebook">f</a>
                 </div>
             </div>
             <div class="footer-section">
@@ -1238,7 +1266,7 @@
                     <li><a href="index.html#work">Portfolio</a></li>
                     <li><a href="index.html#services">Services</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -1253,10 +1281,10 @@
             <div class="footer-section">
                 <h3>Get In Touch</h3>
                 <ul class="footer-links">
-                    <li><a href="/cdn-cgi/l/email-protection#24564b474c4148484c4550424d414840644349454d480a474b49"><span class="__cf_email__" data-cfemail="aad8c5c9c2cfc6c6c2cbdeccc3cfc6ceeacdc7cbc3c684c9c5c7">[email&#160;protected]</span></a></li>
+                    <li><a href="mailto:rochellhatfield@gmail.com">rochellhatfield@gmail.com</a></li>
                     <li><a href="tel:319-333-9684">319-333-9684</a></li>
                     <li>Coralville, IA</li>
-                    <li><a href="Rochell_Hatfield_Resume_Creative_Marketing_Graphic_Artist_FINAL.pdf" download>Download Resume</a></li>
+                    <li><a href="/pdf/Rochell Hatfield Resume 2026.pdf" download>Download Resume</a></li>
                 </ul>
             </div>
         </div>
