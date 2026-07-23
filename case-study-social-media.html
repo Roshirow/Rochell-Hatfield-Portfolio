@@ -567,6 +567,57 @@
             box-shadow: 0 6px 20px rgba(255, 155, 155, 0.4);
         }
 
+        /* Short-form video examples */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0 3rem;
+        }
+
+        .video-example {
+            min-width: 0;
+            margin: 0;
+        }
+
+        .video-example video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            background: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-example figcaption {
+            margin-top: 0.5rem;
+            color: var(--text-body);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* Two videos per row on tablets */
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* One centered video per row on phones */
+        @media (max-width: 520px) {
+            .video-grid {
+                grid-template-columns: minmax(0, 320px);
+                justify-content: center;
+            }
+        }
+
+        /* Hide the native fullscreen button in Chrome, Edge, and Safari */
+        .video-example video::-webkit-media-controls-fullscreen-button {
+            display: none !important;
+        }
+
         footer {
             background: var(--primary);
             color: rgba(255,255,255,0.7);
@@ -765,6 +816,93 @@
                 <p style="font-size: 0.9rem; color: var(--text-body); margin-top: 0.5rem; text-align: center;">Celebrating Paul for working at Java House for 20 years (147 likes)</p>
             </div>
         </div>
+
+            <!-- Short-form video examples -->
+            <div class="video-grid">
+                <figure class="video-example">
+                    <video
+                        controls
+                        controlslist="nodownload nofullscreen noremoteplayback"
+                        disablefullscreen
+                        disableremoteplayback
+                        playsinline
+                        preload="metadata"
+                        aria-label="Behind the scenes Java House Coffee Roasters video"
+                    >
+                        <source
+                            src="/videos/javahousecoffeeroasters-behindthescenes.mp4"
+                            type="video/mp4"
+                        >
+                        Your browser does not support HTML video.
+                    </video>
+                    <figcaption>
+                        Behind the scenes content showcasing daily café operations
+                    </figcaption>
+                </figure>
+
+                <figure class="video-example">
+                    <video
+                        controls
+                        controlslist="nodownload nofullscreen noremoteplayback"
+                        disablefullscreen
+                        disableremoteplayback
+                        playsinline
+                        preload="metadata"
+                        aria-label="Java House Coffee Roasters Miniverse video"
+                    >
+                        <source
+                            src="/videos/javahousecoffeeroasters-miniverse.mp4"
+                            type="video/mp4"
+                        >
+                        Your browser does not support HTML video.
+                    </video>
+                    <figcaption>
+                        Trend-based Miniverse content encouraging audience participation
+                    </figcaption>
+                </figure>
+
+                <figure class="video-example">
+                    <video
+                        controls
+                        controlslist="nodownload nofullscreen noremoteplayback"
+                        disablefullscreen
+                        disableremoteplayback
+                        playsinline
+                        preload="metadata"
+                        aria-label="Java House Coffee Roasters Pride outfit check video"
+                    >
+                        <source
+                            src="/videos/javahousecoffeeroasters-prideoutfitcheck.mp4"
+                            type="video/mp4"
+                        >
+                        Your browser does not support HTML video.
+                    </video>
+                    <figcaption>
+                        Pride outfit check highlighting staff personality and community
+                    </figcaption>
+                </figure>
+
+                <figure class="video-example">
+                    <video
+                        controls
+                        controlslist="nodownload nofullscreen noremoteplayback"
+                        disablefullscreen
+                        disableremoteplayback
+                        playsinline
+                        preload="metadata"
+                        aria-label="Java House Coffee Roasters sandwich promotion video"
+                    >
+                        <source
+                            src="/videos/javahousecoffeeroasters-sandwichdeal.mp4"
+                            type="video/mp4"
+                        >
+                        Your browser does not support HTML video.
+                    </video>
+                    <figcaption>
+                        Promotional short-form video featuring the avocado egg melt deal
+                    </figcaption>
+                </figure>
+            </div>
 
         <h2>Content Creation Process</h2>
         
