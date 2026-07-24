@@ -618,6 +618,416 @@
             display: none !important;
         }
 
+        /* =====================================================
+        JAVA HOUSE PERFORMANCE & AUDIENCE INSIGHTS
+        ===================================================== */
+
+        .jh-data-section {
+        --jh-ink: #171717;
+        --jh-muted: #66645f;
+        --jh-background: #f7f6f1;
+        --jh-card: #ffffff;
+        --jh-line: #dedbd1;
+        --jh-accent: #f2c94c;
+        --jh-accent-dark: #a97500;
+
+        width: 100%;
+        margin: clamp(4rem, 8vw, 7rem) 0;
+        color: var(--jh-ink);
+        }
+
+        .jh-data-header {
+        max-width: 850px;
+        margin-bottom: 2.5rem;
+        }
+
+        .jh-data-eyebrow {
+        margin: 0 0 0.65rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        line-height: 1.4;
+        text-transform: uppercase;
+        color: var(--jh-accent-dark);
+        }
+
+        .jh-data-header h2 {
+        margin: 0 0 1rem;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        line-height: 1.05;
+        }
+
+        .jh-data-intro {
+        max-width: 760px;
+        margin: 0;
+        color: var(--jh-muted);
+        font-size: clamp(1rem, 1.5vw, 1.15rem);
+        line-height: 1.75;
+        }
+
+        /* Primary metric cards */
+
+        .jh-metric-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+        }
+
+        .jh-metric-card {
+        position: relative;
+        min-height: 235px;
+        padding: 1.6rem;
+        overflow: hidden;
+        background: var(--jh-background);
+        border: 1px solid var(--jh-line);
+        border-radius: 4px;
+        }
+
+        .jh-metric-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        height: 5px;
+        background: var(--jh-accent);
+        }
+
+        .jh-metric-label {
+        min-height: 2.8em;
+        margin: 0 0 1.3rem;
+        color: var(--jh-muted);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        line-height: 1.4;
+        text-transform: uppercase;
+        }
+
+        .jh-metric-number {
+        margin: 0;
+        font-size: clamp(2.4rem, 4.5vw, 4rem);
+        font-weight: 750;
+        letter-spacing: -0.05em;
+        line-height: 0.95;
+        }
+
+        .jh-metric-change {
+        display: inline-block;
+        margin: 1rem 0 0.35rem;
+        padding: 0.35rem 0.55rem;
+        background: var(--jh-accent);
+        color: var(--jh-ink);
+        font-size: 0.85rem;
+        font-weight: 750;
+        line-height: 1;
+        }
+
+        .jh-metric-context,
+        .jh-metric-breakdown {
+        margin: 0.75rem 0 0;
+        color: var(--jh-muted);
+        font-size: 0.9rem;
+        line-height: 1.55;
+        }
+
+        /* Detailed insight cards */
+
+        .jh-insight-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin-top: 2rem;
+        }
+
+        .jh-insight-card {
+        padding: clamp(1.5rem, 3vw, 2.25rem);
+        background: var(--jh-card);
+        border: 1px solid var(--jh-line);
+        border-radius: 4px;
+        }
+
+        .jh-insight-heading {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+        align-items: start;
+        margin-bottom: 2rem;
+        }
+
+        .jh-insight-number {
+        margin: 0;
+        color: var(--jh-accent-dark);
+        font-size: 0.85rem;
+        font-weight: 750;
+        letter-spacing: 0.08em;
+        }
+
+        .jh-insight-heading h3 {
+        margin: 0 0 0.65rem;
+        font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+        line-height: 1.2;
+        }
+
+        .jh-insight-heading p {
+        margin: 0;
+        color: var(--jh-muted);
+        font-size: 0.95rem;
+        line-height: 1.65;
+        }
+
+        /* Content-format charts */
+
+        .jh-chart-group {
+        display: grid;
+        gap: 2rem;
+        }
+
+        .jh-chart-title {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+        line-height: 1.4;
+        }
+
+        .jh-chart-title span:first-child {
+        font-weight: 700;
+        }
+
+        .jh-chart-title span:last-child {
+        color: var(--jh-muted);
+        text-align: right;
+        }
+
+        .jh-bar-row + .jh-bar-row {
+        margin-top: 1rem;
+        }
+
+        .jh-bar-label {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 0.45rem;
+        font-size: 0.9rem;
+        }
+
+        .jh-bar-track,
+        .jh-percentage-track {
+        position: relative;
+        width: 100%;
+        height: 10px;
+        overflow: hidden;
+        background: #e9e7df;
+        border-radius: 999px;
+        }
+
+        .jh-bar-fill,
+        .jh-percentage-fill {
+        display: block;
+        width: var(--bar-width);
+        height: 100%;
+        background: var(--jh-accent);
+        border-radius: inherit;
+        }
+
+        /* Audience percentages */
+
+        .jh-audience-stat + .jh-audience-stat {
+        margin-top: 1.5rem;
+        }
+
+        .jh-audience-stat-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 0.6rem;
+        font-size: 0.95rem;
+        }
+
+        .jh-audience-stat-header strong {
+        font-size: 1.05rem;
+        }
+
+        /* Local audience */
+
+        .jh-location-list {
+        border-top: 1px solid var(--jh-line);
+        }
+
+        .jh-location-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.9rem 0;
+        border-bottom: 1px solid var(--jh-line);
+        font-size: 0.95rem;
+        }
+
+        .jh-local-total {
+        margin: 1.25rem 0 0;
+        padding: 1rem;
+        background: var(--jh-background);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        }
+
+        .jh-local-total strong {
+        font-size: 1.3rem;
+        }
+
+        /* Top-post metrics */
+
+        .jh-top-post-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+        }
+
+        .jh-top-post-stat {
+        padding: 1.25rem 0.9rem;
+        background: var(--jh-background);
+        text-align: center;
+        }
+
+        .jh-top-post-stat strong {
+        display: block;
+        margin-bottom: 0.45rem;
+        font-size: clamp(1.6rem, 3vw, 2.25rem);
+        line-height: 1;
+        }
+
+        .jh-top-post-stat span {
+        display: block;
+        color: var(--jh-muted);
+        font-size: 0.78rem;
+        line-height: 1.45;
+        }
+
+        /* Takeaways */
+
+        .jh-insight-takeaway {
+        margin: 2rem 0 0;
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--jh-line);
+        color: var(--jh-muted);
+        font-size: 0.9rem;
+        line-height: 1.65;
+        }
+
+        .jh-insight-takeaway strong {
+        color: var(--jh-ink);
+        }
+
+        /* Strategy summary */
+
+        .jh-strategy-summary {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.75fr) minmax(300px, 1.25fr);
+        gap: clamp(2rem, 6vw, 5rem);
+        margin-top: 1.25rem;
+        padding: clamp(2rem, 5vw, 3.5rem);
+        background: var(--jh-ink);
+        color: #ffffff;
+        }
+
+        .jh-strategy-summary h3 {
+        max-width: 420px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        line-height: 1.2;
+        }
+
+        .jh-strategy-summary .jh-data-eyebrow {
+        color: var(--jh-accent);
+        }
+
+        .jh-strategy-summary ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        }
+
+        .jh-strategy-summary li {
+        position: relative;
+        padding: 0 0 1rem 1.6rem;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 0.95rem;
+        line-height: 1.65;
+        }
+
+        .jh-strategy-summary li:last-child {
+        padding-bottom: 0;
+        }
+
+        .jh-strategy-summary li::before {
+        content: "";
+        position: absolute;
+        top: 0.6em;
+        left: 0;
+        width: 0.55rem;
+        height: 0.55rem;
+        background: var(--jh-accent);
+        }
+
+        /* Source note */
+
+        .jh-data-source {
+        max-width: 900px;
+        margin: 1.25rem 0 0;
+        color: var(--jh-muted);
+        font-size: 0.75rem;
+        line-height: 1.6;
+        }
+
+        /* Responsive layouts */
+
+        @media (max-width: 950px) {
+        .jh-metric-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .jh-insight-grid {
+            grid-template-columns: 1fr;
+        }
+        }
+
+        @media (max-width: 650px) {
+        .jh-data-section {
+            margin: 4rem 0;
+        }
+
+        .jh-metric-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .jh-metric-card {
+            min-height: auto;
+        }
+
+        .jh-strategy-summary {
+            grid-template-columns: 1fr;
+        }
+
+        .jh-top-post-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .jh-chart-title {
+            display: block;
+        }
+
+        .jh-chart-title span {
+            display: block;
+        }
+
+        .jh-chart-title span:last-child {
+            margin-top: 0.2rem;
+            text-align: left;
+        }
+        }
+
         footer {
             background: var(--primary);
             color: rgba(255,255,255,0.7);
@@ -1003,6 +1413,339 @@
             <li>Content scheduling and analytics tools</li>
             <li>Mobile photography and editing apps</li>
         </ul>
+
+        <section class="jh-data-section" aria-labelledby="jh-data-title">
+        <div class="jh-data-header">
+            <p class="jh-data-eyebrow">Measurement & Optimization</p>
+
+            <h2 id="jh-data-title">Performance & Audience Insights</h2>
+
+            <p class="jh-data-intro">
+            I used Meta Business Suite reporting, audience analysis, and local
+            competitor benchmarking to evaluate content performance and identify
+            opportunities for continued growth. The findings informed content format,
+            messaging, audience targeting, and publishing strategy.
+            </p>
+        </div>
+
+        <!-- Primary performance metrics -->
+        <div class="jh-metric-grid">
+            <article class="jh-metric-card">
+            <p class="jh-metric-label">90-Day Instagram Reach</p>
+            <p class="jh-metric-number">3.6K</p>
+            <p class="jh-metric-change">
+                <span aria-hidden="true">↑</span> 20.9%
+            </p>
+            <p class="jh-metric-context">Compared with the previous 90 days</p>
+            </article>
+
+            <article class="jh-metric-card">
+            <p class="jh-metric-label">90-Day Instagram Engagement</p>
+            <p class="jh-metric-number">1.3K</p>
+            <p class="jh-metric-change">
+                <span aria-hidden="true">↑</span> 48.1%
+            </p>
+            <p class="jh-metric-context">Likes, comments, and shares</p>
+            </article>
+
+            <article class="jh-metric-card">
+            <p class="jh-metric-label">Combined Platform Followers</p>
+            <p class="jh-metric-number">8,760</p>
+            <p class="jh-metric-breakdown">
+                5,928 Facebook<br>
+                2,832 Instagram
+            </p>
+            </article>
+
+            <article class="jh-metric-card">
+            <p class="jh-metric-label">Highest Post Reach</p>
+            <p class="jh-metric-number">1,422</p>
+            <p class="jh-metric-change">
+                <span aria-hidden="true">↑</span> 130%
+            </p>
+            <p class="jh-metric-context">Above the median post reach</p>
+            </article>
+        </div>
+
+        <!-- Detailed insights -->
+        <div class="jh-insight-grid">
+            <article class="jh-insight-card">
+            <div class="jh-insight-heading">
+                <p class="jh-insight-number">01</p>
+
+                <div>
+                <h3>Content Format Performance</h3>
+                <p>
+                    Image-led content generated stronger median reach and engagement
+                    than video during the measured period.
+                </p>
+                </div>
+            </div>
+
+            <div class="jh-chart-group">
+                <div class="jh-chart-block">
+                <div class="jh-chart-title">
+                    <span>Median post reach</span>
+                    <span>Last 90 days</span>
+                </div>
+
+                <div class="jh-bar-row">
+                    <div class="jh-bar-label">
+                    <span>Images</span>
+                    <strong>651</strong>
+                    </div>
+
+                    <div
+                    class="jh-bar-track"
+                    role="img"
+                    aria-label="Images had a median post reach of 651"
+                    >
+                    <span class="jh-bar-fill" style="--bar-width: 100%;"></span>
+                    </div>
+                </div>
+
+                <div class="jh-bar-row">
+                    <div class="jh-bar-label">
+                    <span>Videos</span>
+                    <strong>470</strong>
+                    </div>
+
+                    <div
+                    class="jh-bar-track"
+                    role="img"
+                    aria-label="Videos had a median post reach of 470"
+                    >
+                    <span class="jh-bar-fill" style="--bar-width: 72.2%;"></span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="jh-chart-block">
+                <div class="jh-chart-title">
+                    <span>Median interactions per post</span>
+                    <span>Likes, comments and shares</span>
+                </div>
+
+                <div class="jh-bar-row">
+                    <div class="jh-bar-label">
+                    <span>Images</span>
+                    <strong>32</strong>
+                    </div>
+
+                    <div
+                    class="jh-bar-track"
+                    role="img"
+                    aria-label="Images had a median of 32 interactions per post"
+                    >
+                    <span class="jh-bar-fill" style="--bar-width: 100%;"></span>
+                    </div>
+                </div>
+
+                <div class="jh-bar-row">
+                    <div class="jh-bar-label">
+                    <span>Videos</span>
+                    <strong>19</strong>
+                    </div>
+
+                    <div
+                    class="jh-bar-track"
+                    role="img"
+                    aria-label="Videos had a median of 19 interactions per post"
+                    >
+                    <span class="jh-bar-fill" style="--bar-width: 59.4%;"></span>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <p class="jh-insight-takeaway">
+                <strong>Strategic takeaway:</strong> Prioritize image and carousel
+                content for product launches and brand storytelling while using
+                short-form video selectively for behind-the-scenes content, staff
+                personality, and younger-audience discovery.
+            </p>
+            </article>
+
+            <article class="jh-insight-card">
+            <div class="jh-insight-heading">
+                <p class="jh-insight-number">02</p>
+
+                <div>
+                <h3>Core Audience</h3>
+                <p>
+                    Adults ages 25–44 represented approximately two-thirds of the
+                    audience on both major platforms.
+                </p>
+                </div>
+            </div>
+
+            <div class="jh-audience-stat">
+                <div class="jh-audience-stat-header">
+                <span>Facebook followers ages 25–44</span>
+                <strong>67.9%</strong>
+                </div>
+
+                <div
+                class="jh-percentage-track"
+                role="img"
+                aria-label="67.9 percent of Facebook followers were between ages 25 and 44"
+                >
+                <span
+                    class="jh-percentage-fill"
+                    style="--bar-width: 67.9%;"
+                ></span>
+                </div>
+            </div>
+
+            <div class="jh-audience-stat">
+                <div class="jh-audience-stat-header">
+                <span>Instagram followers ages 25–44</span>
+                <strong>67.4%</strong>
+                </div>
+
+                <div
+                class="jh-percentage-track"
+                role="img"
+                aria-label="67.4 percent of Instagram followers were between ages 25 and 44"
+                >
+                <span
+                    class="jh-percentage-fill"
+                    style="--bar-width: 67.4%;"
+                ></span>
+                </div>
+            </div>
+
+            <p class="jh-insight-takeaway">
+                <strong>Strategic takeaway:</strong> Build messaging around the
+                interests and purchasing behavior of adults ages 25–44 while using
+                Reels, employee features, and trend-based content to expand reach among
+                younger customers.
+            </p>
+            </article>
+
+            <article class="jh-insight-card">
+            <div class="jh-insight-heading">
+                <p class="jh-insight-number">03</p>
+
+                <div>
+                <h3>Local Market Concentration</h3>
+                <p>
+                    The audience was concentrated in Iowa City and surrounding
+                    communities, reinforcing the value of location-specific and
+                    community-centered content.
+                </p>
+                </div>
+            </div>
+
+            <div class="jh-location-list">
+                <div class="jh-location-item">
+                <span>Iowa City</span>
+                <strong>20%</strong>
+                </div>
+
+                <div class="jh-location-item">
+                <span>North Liberty</span>
+                <strong>7.3%</strong>
+                </div>
+
+                <div class="jh-location-item">
+                <span>Cedar Rapids</span>
+                <strong>4.3%</strong>
+                </div>
+
+                <div class="jh-location-item">
+                <span>Coralville</span>
+                <strong>3.9%</strong>
+                </div>
+            </div>
+
+            <p class="jh-local-total">
+                <strong>35.5%</strong> of Facebook followers were located across these
+                four core Eastern Iowa markets.
+            </p>
+
+            <p class="jh-insight-takeaway">
+                <strong>Strategic takeaway:</strong> Use location tags, community
+                partnerships, local events, employee stories, and store-specific
+                promotions to connect digital content with in-person visits.
+            </p>
+            </article>
+
+            <article class="jh-insight-card">
+            <div class="jh-insight-heading">
+                <p class="jh-insight-number">04</p>
+
+                <div>
+                <h3>Top-Performing Content</h3>
+                <p>
+                    Community stories, employee recognition, and product announcements
+                    produced some of the strongest individual results.
+                </p>
+                </div>
+            </div>
+
+            <div class="jh-top-post-grid">
+                <div class="jh-top-post-stat">
+                <strong>1,422</strong>
+                <span>Highest post reach</span>
+                </div>
+
+                <div class="jh-top-post-stat">
+                <strong>146</strong>
+                <span>Highest likes on one post</span>
+                </div>
+
+                <div class="jh-top-post-stat">
+                <strong>22</strong>
+                <span>Highest comments on one post</span>
+                </div>
+            </div>
+
+            <p class="jh-insight-takeaway">
+                <strong>Strategic takeaway:</strong> The strongest posts gave customers
+                a reason to connect with the people, history, and community behind the
+                brand—not only its products.
+            </p>
+            </article>
+        </div>
+
+        <!-- Summary of how the data was used -->
+        <div class="jh-strategy-summary">
+            <div>
+            <p class="jh-data-eyebrow">How I Used the Findings</p>
+            <h3>Turning reporting into content decisions</h3>
+            </div>
+
+            <ul>
+            <li>
+                Balanced high-performing image and carousel posts with strategically
+                selected short-form video.
+            </li>
+
+            <li>
+                Centered messaging on the core 25–44 audience while testing content
+                designed for younger customers.
+            </li>
+
+            <li>
+                Increased emphasis on community stories, staff recognition, local
+                events, and location-specific promotions.
+            </li>
+
+            <li>
+                Used competitor benchmarking to identify follower conversion and
+                publishing consistency as areas for continued optimization.
+            </li>
+            </ul>
+        </div>
+
+        <p class="jh-data-source">
+            Data source: Meta Business Suite performance and audience reporting.
+            Performance figures represent a documented 90-day Instagram reporting
+            period; audience totals represent a separate point-in-time report. Platform
+            follower totals are combined and are not deduplicated.
+        </p>
+        </section>
 
         <h2>Impact & Results</h2>
         <p>The multi-platform social media strategy successfully:</p>
