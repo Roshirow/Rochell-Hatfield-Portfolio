@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Iowa City Coffee Company loyalty program redesign case study: 26% increase in customer revisit rate and 18.4% increase in average spend per customer through strategic UX design and multi-channel marketing by Rochell Hatfield.">
-    <meta name="keywords" content="loyalty program design, customer retention, coffee shop marketing, digital marketing case study, Rochell Hatfield">
+    <meta name="description" content="Case study showcasing email marketing and campaign design for nonprofit organizations, highlighting successful strategies, design elements, and measurable results.">
+    <meta name="keywords" content="email marketing, nonprofit campaigns, case study, Rochell Hatfield">
     <meta name="author" content="Rochell Hatfield">
     
-    <title>Loyalty Program Redesign Case Study: Iowa City Coffee Company | Rochell Hatfield</title>
+    <title>Email Marketing & Campaigns Case Study | Rochell Hatfield</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_io/apple-touch-icon.png">
@@ -16,7 +16,7 @@
     <link rel="manifest" href="/img/favicon_io/site.webmanifest">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://rochellhatfield.com/case-study-iowa-city-coffee.html">
+    <link rel="canonical" href="https://rochellhatfield.com/case-study-email-marketing.html">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,14 +27,14 @@
     {
       "@context": "https://schema.org",
       "@type": "CreativeWork",
-      "name": "Iowa City Coffee Company Loyalty Program Redesign",
+      "name": "Email Marketing & Campaigns Case Study",
       "author": {
         "@type": "Person",
         "name": "Rochell Hatfield"
       },
-      "description": "Complete loyalty program redesign and multi-channel marketing strategy resulting in 26% increase in customer revisit rate",
-      "keywords": "loyalty program, digital marketing, UX design, customer retention",
-      "datePublished": "2024-02-01"
+      "description": "Case study showcasing email marketing and campaign design for nonprofit organizations, highlighting successful strategies, design elements, and measurable results.",
+      "keywords": "email marketing, nonprofit campaigns, case study, Rochell Hatfield",
+      "datePublished": "2023-02-01"
     }
     </script>
     
@@ -376,7 +376,7 @@
             height: 40px;
         }
     }
-        
+
         /* Back to Top Button */
         .back-to-top {
             position: fixed;
@@ -481,7 +481,6 @@
             font-weight: 700;
             background: linear-gradient(120deg, var(--coral), var(--cyan), var(--lavender));
             -webkit-background-clip: text;
-            background-clip: text;
             -webkit-text-fill-color: transparent;
             font-family: 'Fraunces', serif;
         }
@@ -605,11 +604,484 @@
             position: relative;
             z-index: 1;
         }
+
+        /* ============================================
+        EMAIL MARKETING CASE STUDY
+        ============================================ */
+
+        .email-case-study {
+            width: 100%;
+        }
+
+        /* Prevent nested wrappers from changing the site's existing main width */
+        .email-content,
+        .email-hero__inner {
+            width: 100%;
+            max-width: none;
+            margin: 0;
+        }
+
+        /* HERO */
+        .email-hero {
+            padding: 0;
+            margin-bottom: 3rem;
+        }
+
+        .email-eyebrow {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--coral);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+
+        .email-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .email-hero__intro {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            max-width: 760px;
+            margin-bottom: 2rem;
+        }
+
+
+        /* PROJECT META
+        Matches existing .meta styling */
+        .email-project-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .email-meta-item {
+            flex: 1;
+            min-width: 160px;
+        }
+
+        .email-meta-label {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+        }
+
+        .email-meta-value {
+            color: var(--primary);
+        }
+
+
+        /* GENERAL SECTIONS */
+        .email-section {
+            margin: 3rem 0;
+            padding: 0;
+        }
+
+        .email-section--alt,
+        .email-section--dark {
+            background: transparent;
+            color: inherit;
+        }
+
+        .email-section-number {
+            color: var(--coral);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .email-section h2,
+        .email-related h2 {
+            font-size: 2rem;
+            margin: 0 0 1.5rem;
+            color: var(--primary);
+        }
+
+        .email-section-intro,
+        .email-lead {
+            color: var(--text-body);
+        }
+
+
+        /* ROLE / CAPABILITY CARDS */
+        .email-skill-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .email-skill-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .email-skill-card h3 {
+            font-size: 1.25rem;
+            margin: 0 0 0.75rem;
+            color: var(--primary);
+        }
+
+        .email-skill-card p {
+            color: var(--text-body);
+            margin-bottom: 0;
+        }
+
+
+        /* EMAIL CAMPAIGNS */
+        .email-campaign-grid {
+            display: grid;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+
+        .email-campaign-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 2rem;
+        }
+
+        .email-campaign-tag {
+            display: inline-block;
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 0.4rem 0.8rem;
+            margin-bottom: 1rem;
+
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .email-campaign-copy h3 {
+            font-size: 1.6rem;
+            margin: 0 0 1rem;
+        }
+
+        .email-campaign-copy > p {
+            color: var(--text-body);
+        }
+
+        .email-campaign-details {
+            margin-top: 1.5rem;
+        }
+
+        .email-campaign-details > div {
+            padding: 0.85rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .email-campaign-details span {
+            display: block;
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .email-campaign-details p {
+            margin: 0;
+            color: var(--text-body);
+        }
+
+
+        /* EMAIL IMAGE PREVIEW */
+        .email-preview {
+            width: 100%;
+        }
+
+        .email-preview__window {
+            position: relative;
+            width: 100%;
+            max-height: 650px;
+            overflow: hidden;
+
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .email-preview__window img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .email-preview__window::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 90px;
+            pointer-events: none;
+
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 251, 245, 0),
+                var(--bg-light)
+            );
+        }
+
+
+        /* Matches existing CTA button styling */
+        .email-view-button {
+            display: block;
+            width: 100%;
+            margin-top: 1rem;
+            padding: 0.9rem 1.5rem;
+
+            background: linear-gradient(
+                135deg,
+                var(--coral),
+                var(--peach)
+            );
+
+            color: white;
+            border: none;
+            border-radius: 6px;
+
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .email-view-button:hover,
+        .email-view-button:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 155, 155, 0.4);
+        }
+
+
+        /* CAMPAIGN PROCESS */
+        .email-process {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .email-process-step {
+            background: linear-gradient(
+                135deg,
+                rgba(255, 215, 125, 0.15),
+                rgba(168, 230, 207, 0.15)
+            );
+
+            border-left: 4px solid var(--coral);
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+        }
+
+        .email-process-step > span {
+            display: block;
+            color: var(--coral);
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .email-process-step h3 {
+            font-size: 1.25rem;
+            margin: 0 0 0.75rem;
+        }
+
+        .email-process-step p {
+            margin-bottom: 0;
+            color: var(--text-body);
+        }
+
+        .email-process-arrow {
+            display: none;
+        }
+
+
+        /* TOOLS
+        Matches existing .tag-list / .tag styling */
+        .email-tools {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .email-tools span {
+            background: var(--cream);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+            color: var(--primary);
+        }
+
+        .email-tools-note {
+            color: var(--text-body);
+        }
+
+
+        /* RELATED WORK */
+        .email-related {
+            margin: 4rem 0;
+            padding: 0;
+            background: transparent;
+            color: var(--primary);
+        }
+
+        .email-related-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .email-related-card {
+            display: block;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+
+            color: var(--primary);
+            text-decoration: none;
+
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .email-related-card:hover,
+        .email-related-card:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(107, 78, 61, 0.12);
+        }
+
+        .email-related-card > span {
+            color: var(--coral);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .email-related-card h3 {
+            font-size: 1.4rem;
+            margin: 0.75rem 0 1rem;
+        }
+
+        .email-related-card p {
+            color: var(--text-body);
+        }
+
+        .email-related-card strong {
+            color: var(--coral);
+        }
+
+
+        /* FULL EMAIL MODAL */
+        .email-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+
+            display: none;
+            overflow-y: auto;
+
+            background: rgba(0, 0, 0, 0.88);
+            padding: 5rem 1.5rem 3rem;
+        }
+
+        .email-modal.is-open {
+            display: block;
+        }
+
+        .email-modal__content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .email-modal__content img {
+            display: block;
+            width: 100%;
+            height: auto;
+            background: white;
+        }
+
+        .email-modal__close {
+            position: fixed;
+            top: 1.5rem;
+            right: 2rem;
+
+            width: 45px;
+            height: 45px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: linear-gradient(
+                135deg,
+                var(--coral),
+                var(--peach)
+            );
+
+            color: white;
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+
+            .email-hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .email-project-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .email-skill-grid,
+            .email-campaign-card,
+            .email-process,
+            .email-related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .email-campaign-card {
+                padding: 1.5rem;
+            }
+
+            .email-preview__window {
+                max-height: 550px;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- HAMBURGER MENU NAVIGATION STRUCTURE -->
-    <!-- Replace your existing <nav> section with this -->
 
     <nav role="navigation" aria-label="Main navigation">
         <div class="nav-container">
@@ -671,225 +1143,453 @@
         </ul>
     </nav>
 
-    <main>
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> / <a href="index.html#work">Work</a> / Iowa City Coffee Company
-        </div>
+<main class="email-case-study">
 
-        <h1>Loyalty Program Redesign & Multi-Channel Marketing</h1>
+    <!-- HERO -->
+    <section class="email-hero">
+        <div class="email-hero__inner">
 
-        <div class="meta">
-            <div class="meta-item">
-                <strong>Client</strong>
-                <span>Iowa City Coffee Company</span>
-            </div>
-            <div class="meta-item">
-                <strong>Timeline</strong>
-                <span>12 months (Feb 2023 - Apr 2024)</span>
-            </div>
-            <div class="meta-item">
-                <strong>Role</strong>
-                <span>Digital Marketing Director</span>
-            </div>
-        </div>
+            <p class="email-eyebrow">Email Marketing & Campaign Creative</p>
 
-        <div class="results-highlight">
-            <h2 style="margin-top: 0;">Results</h2>
-            <div class="results-grid">
-                <div class="result-item">
-                    <div class="result-number">↑26%</div>
-                    <p class="result-label">Customer revisit rate</p>
+            <h1>Email Marketing & Seasonal Campaigns</h1>
+
+            <p class="email-hero__intro">
+                Promotional email strategy, copywriting, design, and campaign
+                creative developed for Java House Coffee Roasters to support
+                seasonal products, merchandise, ecommerce, hiring, mobile
+                ordering, and in-store traffic.
+            </p>
+
+            <div class="email-project-meta">
+
+                <div class="email-meta-item">
+                    <span class="email-meta-label">Client</span>
+                    <span class="email-meta-value">
+                        Java House Coffee Roasters
+                    </span>
                 </div>
-                <div class="result-item">
-                    <div class="result-number">↑18.4%</div>
-                    <p class="result-label">Avg spend per customer</p>
+
+                <div class="email-meta-item">
+                    <span class="email-meta-label">Timeline</span>
+                    <span class="email-meta-value">2023–2024</span>
                 </div>
-                <div class="result-item">
-                    <div class="result-number">4</div>
-                    <p class="result-label">Websites unified</p>
+
+                <div class="email-meta-item">
+                    <span class="email-meta-label">Role</span>
+                    <span class="email-meta-value">
+                        Digital Marketing Director
+                    </span>
                 </div>
+
             </div>
+
+        </div>
+    </section>
+
+
+    <!-- OVERVIEW -->
+    <section class="email-section">
+        <div class="email-content email-content--narrow">
+
+            <p class="email-section-number">01</p>
+            <h2>Overview</h2>
+
+            <p class="email-lead">
+                Email was one component of a broader multi-channel marketing
+                strategy for Java House Coffee Roasters. I developed promotional
+                emails that brought together campaign messaging, product
+                merchandising, seasonal creative, calls to action, and
+                brand-consistent design.
+            </p>
+
+            <p>
+                Campaigns supported both digital and physical customer
+                experiences, promoting limited-time offers, seasonal beverages,
+                retail merchandise, ecommerce, hiring, and mobile ordering while
+                maintaining a consistent visual identity across customer
+                touchpoints.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ROLE / CAPABILITIES -->
+    <section class="email-section email-section--alt">
+        <div class="email-content">
+
+            <p class="email-section-number">02</p>
+            <h2>My Role</h2>
+
+            <div class="email-skill-grid">
+
+                <div class="email-skill-card">
+                    <h3>Email Strategy</h3>
+                    <p>
+                        Planned promotional messaging around seasonal campaigns,
+                        customer priorities, product launches, and limited-time
+                        offers.
+                    </p>
+                </div>
+
+                <div class="email-skill-card">
+                    <h3>Copywriting</h3>
+                    <p>
+                        Developed headlines, promotional messaging, supporting
+                        copy, and calls to action designed for fast scanning and
+                        clear customer action.
+                    </p>
+                </div>
+
+                <div class="email-skill-card">
+                    <h3>Graphic Design</h3>
+                    <p>
+                        Created layouts and campaign graphics that maintained
+                        brand consistency while giving individual promotions
+                        their own visual hierarchy.
+                    </p>
+                </div>
+
+                <div class="email-skill-card">
+                    <h3>Merchandising</h3>
+                    <p>
+                        Integrated seasonal beverages, retail merchandise,
+                        ecommerce offers, gift products, and other customer
+                        priorities within coordinated campaigns.
+                    </p>
+                </div>
+
+                <div class="email-skill-card">
+                    <h3>Campaign Coordination</h3>
+                    <p>
+                        Connected email promotions with in-store messaging,
+                        social media, ecommerce, mobile ordering, and seasonal
+                        marketing initiatives.
+                    </p>
+                </div>
+
+                <div class="email-skill-card">
+                    <h3>Performance Analysis</h3>
+                    <p>
+                        Used customer and sales performance data across marketing
+                        initiatives to inform future promotional and merchandise
+                        decisions.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- EMAIL CAMPAIGNS -->
+    <section class="email-section">
+        <div class="email-content">
+
+            <p class="email-section-number">03</p>
+            <h2>Selected Email Campaigns</h2>
+
+            <p class="email-section-intro">
+                These examples show seasonal promotional emails created for
+                Java House. Each campaign combined multiple customer messages
+                within a single branded communication while maintaining a clear
+                promotional hierarchy.
+            </p>
+
+
+            <div class="email-campaign-grid">
+
+                <!-- BLACK FRIDAY -->
+                <article class="email-campaign-card">
+
+                    <div class="email-campaign-copy">
+
+                        <span class="email-campaign-tag">
+                            Seasonal Promotion
+                        </span>
+
+                        <h3>Black Friday Campaign</h3>
+
+                        <p>
+                            A multi-offer holiday email designed to lead with a
+                            strong Black Friday promotion while supporting
+                            seasonal beverages, holiday merchandise, hiring,
+                            mobile ordering, and additional brand updates.
+                        </p>
+
+                        <div class="email-campaign-details">
+                            <div>
+                                <span>Focus</span>
+                                <p>
+                                    Black Friday offers, merchandise,
+                                    seasonal products
+                                </p>
+                            </div>
+
+                            <div>
+                                <span>Channels Supported</span>
+                                <p>
+                                    Ecommerce, in-store sales,
+                                    mobile ordering
+                                </p>
+                            </div>
+
+                            <div>
+                                <span>Deliverables</span>
+                                <p>
+                                    Email design, campaign graphics,
+                                    copy, CTAs
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="email-preview">
+
+                        <div class="email-preview__window">
+                            <img
+                                src="img/java-house-black-friday-email.jpg"
+                                alt="Black Friday promotional email designed for Java House Coffee Roasters"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <button
+                            class="email-view-button"
+                            type="button"
+                            data-email-src="img/java-house-black-friday-email.jpg"
+                            data-email-alt="Full Black Friday promotional email designed for Java House Coffee Roasters"
+                        >
+                            View Full Email
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- HOLIDAY -->
+                <article class="email-campaign-card">
+
+                    <div class="email-campaign-copy">
+
+                        <span class="email-campaign-tag">
+                            Holiday Campaign
+                        </span>
+
+                        <h3>Holiday Retail & Product Campaign</h3>
+
+                        <p>
+                            A holiday promotional email extending seasonal
+                            momentum through retail merchandise, gift products,
+                            limited-time beverages, hiring communications, and
+                            mobile ordering.
+                        </p>
+
+                        <div class="email-campaign-details">
+                            <div>
+                                <span>Focus</span>
+                                <p>
+                                    Holiday merchandise, gifting,
+                                    seasonal beverages
+                                </p>
+                            </div>
+
+                            <div>
+                                <span>Channels Supported</span>
+                                <p>
+                                    Retail, ecommerce,
+                                    in-store traffic, mobile ordering
+                                </p>
+                            </div>
+
+                            <div>
+                                <span>Deliverables</span>
+                                <p>
+                                    Email design, promotional copy,
+                                    product merchandising, CTAs
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="email-preview">
+
+                        <div class="email-preview__window">
+                            <img
+                                src="img/java-house-holiday-email.jpg"
+                                alt="Holiday promotional email designed for Java House Coffee Roasters"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <button
+                            class="email-view-button"
+                            type="button"
+                            data-email-src="img/java-house-holiday-email.jpg"
+                            data-email-alt="Full holiday promotional email designed for Java House Coffee Roasters"
+                        >
+                            View Full Email
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- STRATEGY -->
+    <section class="email-section email-section--dark">
+        <div class="email-content">
+
+            <p class="email-section-number">04</p>
+            <h2>Campaign Approach</h2>
+
+            <div class="email-process">
+
+                <div class="email-process-step">
+                    <span>01</span>
+                    <h3>Define the Priority</h3>
+                    <p>
+                        Identify the primary promotion, product launch,
+                        seasonal message, or customer action.
+                    </p>
+                </div>
+
+                <div class="email-process-arrow">→</div>
+
+                <div class="email-process-step">
+                    <span>02</span>
+                    <h3>Build the Hierarchy</h3>
+                    <p>
+                        Structure messaging so the strongest offer leads while
+                        supporting content remains easy to navigate.
+                    </p>
+                </div>
+
+                <div class="email-process-arrow">→</div>
+
+                <div class="email-process-step">
+                    <span>03</span>
+                    <h3>Create the Campaign</h3>
+                    <p>
+                        Develop copy, campaign graphics, product imagery,
+                        and calls to action within the brand system.
+                    </p>
+                </div>
+
+                <div class="email-process-arrow">→</div>
+
+                <div class="email-process-step">
+                    <span>04</span>
+                    <h3>Connect Channels</h3>
+                    <p>
+                        Coordinate messaging with ecommerce, stores,
+                        social media, and other active promotions.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TOOLS -->
+    <section class="email-section">
+        <div class="email-content">
+
+            <p class="email-section-number">05</p>
+            <h2>Tools & Capabilities</h2>
+
+            <p class="email-tools-note">
+                Platforms used across my email marketing and CRM work include:
+            </p>
+
+            <div class="email-tools">
+                <span>Mailchimp</span>
+                <span>Constant Contact</span>
+                <span>HubSpot</span>
+                <span>Square Marketing</span>
+                <span>Adobe Creative Suite</span>
+                <span>Graphic Design</span>
+                <span>Copywriting</span>
+                <span>Email Marketing</span>
+                <span>Campaign Strategy</span>
+                <span>Audience Segmentation</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TAKEAWAY -->
+    <section class="email-section email-section--alt">
+        <div class="email-content email-content--narrow">
+
+            <p class="email-section-number">06</p>
+            <h2>Beyond the Email</h2>
+
+            <p class="email-lead">
+                The goal was not simply to design an attractive email. Each
+                campaign needed to organize multiple business priorities into
+                a communication that customers could quickly understand and act on.
+            </p>
+
+            <p>
+                My broader role allowed me to connect email creative with
+                merchandise, ecommerce, social content, websites, paid media,
+                in-store promotions, and customer behavior—helping maintain
+                consistency across the complete customer experience.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- FULL EMAIL MODAL -->
+    <div
+        class="email-modal"
+        id="emailModal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Full email preview"
+    >
+
+        <button
+            class="email-modal__close"
+            type="button"
+            aria-label="Close full email"
+        >
+            ×
+        </button>
+
+        <div class="email-modal__content">
+            <img
+                id="emailModalImage"
+                src=""
+                alt=""
+            >
         </div>
 
-        <h2>The Challenge</h2>
-        <p>Iowa City Coffee Company operated four locations across North Liberty and Iowa City with inconsistent branding and an underperforming loyalty rewards system. The existing program was complex, confusing for customers, and failed to drive repeat visits or increase average transaction values.</p>
-        
-        <p>Key pain points included:</p>
-        <ul>
-            <li>Fragmented brand experience across four separate websites</li>
-            <li>Loyalty program with high friction and low perceived value</li>
-            <li>Inconsistent marketing materials across locations</li>
-            <li>No unified digital strategy across web, social, and email channels</li>
-            <li>Lack of design standards for seasonal campaigns</li>
-        </ul>
+    </div>
 
-        <h2>Research & Strategy</h2>
-        <p>I began with comprehensive customer research through multiple methods:</p>
-        
-        <h3>Observational Research</h3>
-        <p>I spent several days observing customer interactions at the POS during checkout. Key findings:</p>
-        <ul>
-            <li>Most customers ignored the sign-in/sign-up prompts and went straight to "pay now"</li>
-            <li>Very few customers who did sign in actually redeemed their Perky Points</li>
-            <li>The check-in process added friction to the checkout experience</li>
-        </ul>
-
-        <h3>Customer Survey Results</h3>
-        <p>Direct customer feedback revealed major pain points:</p>
-        <ul>
-            <li><strong>Unreachable rewards</strong> - Points thresholds were too high</li>
-            <li><strong>Point expiration</strong> - Customers frustrated that points expired after 6 months</li>
-            <li><strong>Lack of understanding</strong> - Many didn't know how the program worked</li>
-            <li><strong>Low awareness</strong> - Even more didn't know the program existed</li>
-        </ul>
-
-        <h3>Data Analysis</h3>
-        <p>Sales data comparison revealed an opportunity:</p>
-        <ul>
-            <li>Non-loyalty customers made up a higher percentage of transactions</li>
-            <li>BUT loyalty customers had higher average transaction values</li>
-            <li>Clear potential to convert more customers to loyalty program</li>
-        </ul>
-
-        <h2>My Approach</h2>
-        
-        <h3>Platform Assessment</h3>
-        <p>I analyzed the Square POS loyalty system capabilities and constraints:</p>
-        <ul>
-            <li>Could create unlimited reward tiers</li>
-            <li>Reward types limited to: free items, percentage off, or dollar amount off</li>
-            <li>Flexible points earning structure (customizable dollar-to-points ratio)</li>
-            <li>Need to work within platform constraints while maximizing value</li>
-        </ul>
-
-        <h3>Loyalty Program Redesign</h3>
-        <p>I restructured the entire rewards program based on research findings:</p>
-        <ul>
-            <li><strong>Simplified point structure:</strong> Clear 1 point = $1 spent ratio</li>
-            <li><strong>Achievable reward tiers:</strong> Lower thresholds for first rewards to build engagement</li>
-            <li><strong>Eliminated point expiration:</strong> Removed the 6-month expiry that frustrated customers</li>
-            <li><strong>Birthday rewards:</strong> Added special perks to build emotional connection</li>
-            <li><strong>Surprise mechanics:</strong> Random rewards to create delight moments</li>
-            <li><strong>Streamlined check-in:</strong> Faster enrollment and redemption process</li>
-        </ul>
-
-        <h3>Brand Unification</h3>
-        <p>I established comprehensive brand guidelines and design systems that ensured consistency across all four locations (Java House Coffee Roasters and Heirloom Salad Company):</p>
-        <ul>
-            <li>Unified WordPress template system for all four websites</li>
-            <li>Standardized color palette, typography, and visual language</li>
-            <li>Reusable content modules for promotions and seasonal campaigns</li>
-            <li>Template library for in-store signage and print collateral</li>
-        </ul>
-
-        <h3>Multi-Channel Marketing Execution</h3>
-        <p>I led creative strategy across all digital touchpoints:</p>
-        <ul>
-            <li><strong>Web:</strong> Redesigned and maintained four location websites with consistent UX</li>
-            <li><strong>Email:</strong> Built automated flows (welcome series, loyalty updates, point notifications)</li>
-            <li><strong>Social:</strong> Created monthly content calendar with photography direction and community management</li>
-            <li><strong>Paid Media:</strong> Designed ad creative for Google Ads and Meta campaigns</li>
-            <li><strong>Video:</strong> Produced promotional videos for social and in-store display</li>
-            <li><strong>Print:</strong> Designed seasonal promotional materials and in-store signage</li>
-            <li><strong>In-Store:</strong> Created comprehensive launch campaign with signage, staff training materials</li>
-        </ul>
-
-        <h2>Launch & Results</h2>
-        
-        <h3>POS Interface Redesign</h3>
-        <p>I redesigned the customer-facing loyalty interface on Square POS to reduce friction and increase engagement:</p>
-
-        <div style="margin: 3rem 0;">
-            <img src="/img/loyalty-rewards-research-image2.jpg" alt="Loyalty rewards POS interface showing sign-up flow, rewards redemption screens, and transaction completion across multiple device views" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 1rem;">
-            <p style="font-size: 0.9rem; color: var(--text-body); font-style: italic; text-align: center;">POS interface design showing simplified sign-up, clear point display, and streamlined redemption flow</p>
-        </div>
-
-        <p><strong>Key UX Improvements:</strong></p>
-        <ul>
-            <li>Reduced sign-up friction with clear "Sign up to get Loyalty Perky Points" messaging</li>
-            <li>Prominent point balance display so customers always know their status</li>
-            <li>Visual reward cards showing exactly what's available and how many points needed</li>
-            <li>One-tap redemption process (down from multi-step flow)</li>
-            <li>Clear confirmation screens with "Transaction Complete" feedback</li>
-            <li>Receipt integration showing points earned and total balance</li>
-        </ul>
-        
-        <h3>Launch Strategy</h3>
-        <p>The revamped program launched with a comprehensive marketing campaign:</p>
-        <ul>
-            <li>Email announcement to existing customer database</li>
-            <li>Social media campaign across all platforms</li>
-            <li>In-store signage and promotional materials</li>
-            <li>Staff training on new program features and benefits</li>
-            <li>Educational content explaining how to earn and redeem</li>
-        </ul>
-
-        <h3>Measured Results</h3>
-        <p><strong>First Month vs. Last Month Performance:</strong></p>
-        
-        <p><strong>Loyalty Engagement Growth:</strong></p>
-        <ul>
-            <li>Month 1: 36% of sales from loyalty customers</li>
-            <li>Month 12: 62% of sales from loyalty customers</li>
-            <li><strong>Result: 26% increase in loyalty participation</strong></li>
-        </ul>
-
-        <p><strong>Average Customer Spend Increase:</strong></p>
-        <ul>
-            <li>Month 1: Loyalty customers spent $34.33 average</li>
-            <li>Month 12: Loyalty customers spent $40.65 average</li>
-            <li><strong>Result: $6.32 increase per transaction (18.4% growth)</strong></li>
-        </ul>
-
-        <p><strong>Total Sales Impact:</strong></p>
-        <ul>
-            <li>Month 1: Loyalty sales totaled $177,051</li>
-            <li>Month 12: Loyalty sales totaled $241,682</li>
-            <li><strong>Result: $64,631 increase in loyalty-driven revenue</strong></li>
-        </ul>
-
-        <h2>Continuous Improvement</h2>
-        <p>Post-launch, I maintained an iterative approach:</p>
-        <ul>
-            <li>Ongoing customer feedback collection</li>
-            <li>Monthly performance monitoring and reporting</li>
-            <li>Seasonal reward offerings to maintain engagement</li>
-            <li>Regular updates to keep program fresh and relevant</li>
-            <li>A/B testing of different reward thresholds and types</li>
-        </ul>
-
-        <h2>Key Deliverables</h2>
-        <div class="tag-list">
-            <span class="tag">Loyalty Program UI/UX</span>
-            <span class="tag">Email Automation Flows</span>
-            <span class="tag">Social Content Calendar</span>
-            <span class="tag">Google/Meta Ad Creative</span>
-            <span class="tag">Promotional Video</span>
-            <span class="tag">Photography Direction</span>
-            <span class="tag">Seasonal Campaigns</span>
-            <span class="tag">Brand Guidelines</span>
-            <span class="tag">WordPress Templates</span>
-            <span class="tag">In-Store Signage</span>
-        </div>
-
-        <h2>Tools & Technologies</h2>
-        <ul>
-            <li>WordPress (custom theme development)</li>
-            <li>Adobe Creative Suite (Photoshop, Illustrator, InDesign, Premiere Pro)</li>
-            <li>Email marketing platform (automation and segmentation)</li>
-            <li>Google Analytics (performance tracking)</li>
-            <li>Google Ads & Meta Ads Manager</li>
-            <li>POS system integration for loyalty tracking</li>
-        </ul>
-
-        <h2>Lessons Learned</h2>
-        <p>This project reinforced the importance of customer-centered design in loyalty programs. By simplifying the user experience and focusing on perceived value over complexity, we achieved significantly higher engagement. The unified brand system also streamlined campaign execution, reducing update time by 40% while maintaining consistency across all locations.</p>
-    </main>
+</main>
 
     <!-- Let's Work Together CTA -->
     <section style="max-width: 900px; margin: 5rem auto; padding: 3rem 2rem; background: linear-gradient(135deg, var(--coral), var(--peach)); border-radius: 20px; text-align: center; color: white;">
         <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Let's Create Something Great Together</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Whether you need a loyalty program redesign, brand strategy, or multi-channel marketing campaign—I'd love to hear about your project.</p>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Whether you need nonprofit branding, accessible web design, or a complete brand strategy—I'd love to hear about your project.</p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
             <a href="/contact.html" style="padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; background: white; color: var(--coral); transition: all 0.3s;">Start a Conversation</a>
         </div>
@@ -900,13 +1600,13 @@
         <h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; font-family: 'Fraunces', serif; color: var(--primary);">More Case Studies</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
             
-            <!-- Bird House Case Study -->
+            <!-- Iowa City Coffee Case Study -->
             <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
-                <img src="/img/bird-house-design-image1.jpg" alt="The Bird House website design" style="width: 100%; height: 200px; object-fit: cover;">
+                <img src="/img/Perky Points Loyalty Rewards System.jpg" alt="Loyalty program interface design" style="width: 100%; height: 200px; object-fit: cover;">
                 <div style="padding: 2rem;">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); font-family: 'Fraunces', serif;">The Bird House Rebrand</h3>
-                    <p style="color: var(--primary); margin-bottom: 1rem;">Complete nonprofit rebrand including logo, brand guidelines, and WCAG 2.1 AA compliant website for Johnson County's hospice home.</p>
-                    <a href="case-study-bird-house.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">View Case Study →</a>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); font-family: 'Fraunces', serif;">Loyalty Program Redesign</h3>
+                    <p style="color: var(--primary); margin-bottom: 1rem;">Multi-channel marketing campaign and UX redesign achieving 26% increase in loyalty participation and $6.32 boost in average spend.</p>
+                    <a href="case-study-iowa-city-coffee.html" style="display: inline-block; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">View Case Study →</a>
                 </div>
             </div>
 
@@ -1099,6 +1799,57 @@ document.addEventListener('DOMContentLoaded', function() {
                 closeMenu();
             }
         }, 250);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("emailModal");
+    const modalImage = document.getElementById("emailModalImage");
+    const closeButton = document.querySelector(".email-modal__close");
+    const viewButtons = document.querySelectorAll(".email-view-button");
+
+    function openEmail(button) {
+        const imageSrc = button.dataset.emailSrc;
+        const imageAlt = button.dataset.emailAlt || "Full email campaign";
+
+        modalImage.src = imageSrc;
+        modalImage.alt = imageAlt;
+
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+
+        document.body.style.overflow = "hidden";
+
+        closeButton.focus();
+    }
+
+    function closeEmail() {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+
+        modalImage.src = "";
+
+        document.body.style.overflow = "";
+    }
+
+    viewButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            openEmail(button);
+        });
+    });
+
+    closeButton.addEventListener("click", closeEmail);
+
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            closeEmail();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && modal.classList.contains("is-open")) {
+            closeEmail();
+        }
     });
 });
 </script>
